@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Homebrew
+export HOMEBREW_NO_AUTO_UPDATE=true
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/k.v/.oh-my-zsh"
 
@@ -27,7 +30,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -62,7 +65,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump history git vscode zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(autojump history git tig thefuck vscode xcode zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,5 +97,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias cat="bat"
+alias vim="mvim"
+alias pm="pm2"
+alias ping="ping -c 5"
+alias ipi="ipconfig getifaddr en0"
+alias c="clear"
+alias getpass="openssl rand -base64 14"
+alias idea="/usr/local/bin/idea"
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+alias python3="/usr/local/Cellar/python/3.7.6_1/bin/python3"
 
 source ~/.bash_profile
+source /Users/k.v/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
