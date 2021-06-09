@@ -1,5 +1,4 @@
 # Personal Dotfiles
 
-- zsh customizations for macOS
+- Environment configuration file
 - iTerm2 theme and font
-- Front-end development configuration

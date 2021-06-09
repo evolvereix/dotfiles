@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/k.v/.oh-my-zsh"
+export ZSH="/Users/zen/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,9 +68,7 @@ export UPDATE_ZSH_DAYS=30
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump history git git-open tig thefuck vscode xcode zsh-autosuggestions zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(git history vscode xcode autojump tig thefuck git-open zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -131,11 +129,12 @@ alias c="clear"
 alias getpass="openssl rand -base64 14"
 
 # IDE
-alias idea="/usr/local/bin/idea"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-alias python3="/usr/local/Cellar/python/3.7.6_1/bin/python3"
+
+# Ptyhon 3
+alias python="/usr/local/bin/python3"
+alias pip="/usr/local/bin/pip3"
 
 eval "$(starship init zsh)"
 
-source ~/.bash_profile
-source /Users/k.v/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/oh-my-zsh.sh
