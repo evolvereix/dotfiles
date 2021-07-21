@@ -59,10 +59,8 @@ brew install ${plugins[@]}
 git clone https://github.com/algorizen/dotfiles ~/.dotfiles
 
 # Make some commonly used folders
-mkdir ~/Personal
 mkdir ~/Work
 mkdir ~/Developer
-mkdir ~/GitHub
 
 # Source dot file
 echo '. ~/.dotfiles/macos/.zshrc' >> ~/.zshrc

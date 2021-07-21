@@ -88,6 +88,7 @@ plugins=(git history vscode xcode autojump tig thefuck git-open zsh-autosuggesti
 # export ARCHFLAGS="-arch x86_64"
 
 # Homebrew
+export PATH=/opt/homebrew/bin:$PATH
 export HOMEBREW_NO_AUTO_UPDATE=true
 
 # Bat customization highlighting theme.
@@ -129,12 +130,13 @@ alias c="clear"
 alias getpass="openssl rand -base64 14"
 
 # IDE
-alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+alias code="/usr/local/bin/code"
+alias idea="/usr/local/bin/idea"
 
 # Ptyhon 3
 alias python="/usr/local/bin/python3"
 alias pip="/usr/local/bin/pip3"
 
-eval "$(starship init zsh)"
-
 source $ZSH/oh-my-zsh.sh
+
+eval "$(starship init zsh)"
