@@ -1,15 +1,12 @@
 # Check for Homebrew,
 # Install if we don't have it
-# if test ! $(which brew); then
-#   echo "Installing homebrew..."
-#   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# fi
+if test ! $(which brew); then
+  echo "Installing homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Update homebrew recipes
-# brew update
-
-# Install git
-# brew install git
+brew update
 
 # Some git defaults
 git config --global color.ui true
@@ -26,10 +23,8 @@ nvm alias default stable
 
 # Apps
 # apps=(
-#   1password
 #   google-chrome
 #   iterm2
-#   visual-studio-code
 # )
 
 # Install apps to /Applications
@@ -39,16 +34,18 @@ nvm alias default stable
 
 # Plugins
 plugins=(
-  yarn
-  starship
-  bat
-  jq
-  autojump
   tig
-  thefuck
   git-open
+  jq
+  bat
+  tree
+  mcfly
+  starship
+  fig
+  autojump
   zsh-autosuggestions
   zsh-syntax-highlighting
+  pnpm
 )
 
 # Install plugins

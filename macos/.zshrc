@@ -1,7 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init zsh pre)"
-
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -74,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode)
+plugins=(git vscode xcode autojump fd fig git-open F-Sy-H zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,15 +98,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# autojump
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-
-# zsh-autosuggestions
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# zsh-syntax-highlighting
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -131,8 +120,11 @@ alias la="ls -A"
 alias ll="ls -Al"
 
 # Some Tools
+alias c="clear"
 alias cat="bat"
+alias go="git open"
 alias ping="ping -c 5"
+alias tree="tree --dirsfirst"
 alias ipi="ipconfig getifaddr en0"
 alias getpass="openssl rand -base64 12"
 
@@ -140,5 +132,8 @@ alias getpass="openssl rand -base64 12"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # Starship
 eval "$(starship init zsh)"
+# McFly
+eval "$(mcfly init zsh)"
+
 # Fig post block. Keep at the bottom of this file.
-eval "$(fig init zsh post)"
+. "$HOME/.fig/shell/zshrc.post.zsh"

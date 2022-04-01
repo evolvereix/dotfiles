@@ -1,0 +1,246 @@
+{
+  "editor.tabSize": 2,
+  "editor.fontSize": 13.5,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "interval",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.suggestSelection": "first",
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "editor.cursorSmoothCaretAnimation": true,
+  "workbench.tree.indent": 10,
+  "workbench.editor.wrapTabs": true,
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.tabCloseButton": "left",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.iconTheme": "eq-material-theme-icons-palenight",
+  "workbench.colorTheme": "Material Theme Palenight",
+  "workbench.productIconTheme": "icons-carbon",
+  "workbench.preferredLightColorTheme": "Moxer Light",
+  "workbench.preferredDarkColorTheme": "Material Theme Palenight",
+  "window.autoDetectColorScheme": true,
+  "files.insertFinalNewline": true,
+  "files.simpleDialog.enable": true,
+  "debug.console.fontSize": 13,
+  "git.untrackedChanges": "separate",
+  "scm.diffDecorationsGutterWidth": 2,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "css.lint.hexColorLength": "ignore",
+  "css.format.spaceAroundSelectorSeparator": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  // Package Manager
+  "npm.packageManager": "pnpm",
+  "eslint.packageManager": "pnpm",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // Terminal
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.autoReplies": {
+    "[Oh My Zsh] Would you like to check for updates? [Y/n]": "Y\r"
+  },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  // Prettier
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  // ESLint
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
+  ],
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  // Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "yaml": false,
+    "plaintext": false
+  },
+  "markdown.extension.toc.updateOnSave": false,
+  // markdownlint config
+  "markdownlint.config": {
+    // "no-inline-html": {
+    //   "allowed_elements": ["p", "img"]
+    // }
+    "no-inline-html": false,
+    "no-emphasis-as-header": false,
+    "no-duplicate-heading": false,
+    "first-line-heading": false
+  },
+  "errorLens.excludeBySource": ["cSpell", "Grammarly", "eslint"],
+  "cSpell.language": "en,en-US",
+  "cSpell.allowCompoundWords": true,
+  "cSpell.userWords": [
+    "antd",
+    "axshare",
+    "Cascader",
+    "formily",
+    "pnpm",
+    "shiqiao"
+  ],
+  "volar.codeLens.scriptSetupTools": true,
+  "volar.completion.preferredTagNameCase": "pascal",
+  "redhat.telemetry.enabled": false,
+  // Comments
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "FIXME",
+      "color": "#FFC900",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "BUG",
+      "color": "#F87261",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "HACK",
+      "color": "#BC0FBF",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "OPTIMIZE",
+      "color": "#FF6781",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "UNDONE",
+      "color": "#DE5347",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "XXX",
+      "color": "#4C8CF5",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "REVIEW",
+      "color": "#6ACFB9",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  // FileHeader
+  "fileheader.configObj": {
+    "autoAdd": false, // 自动添加文件头部注释 开启才能自动添加
+    "autoAlready": false, // 自动添加头部注释：只允许插件支持的语言，以及用户通过language 选项自定义的注释。默认开启
+    "wideSame": true, // 头部注释等宽设置 设置为true开启
+    "wideNum": 13, // 字段长度 默认为13
+    "createHeader": false, // 新建文件自动添加头部注释 默认打开
+    "dateFormat": "YYYY-MM-DD HH:mm:ss", // 默认格式
+    "CheckFileChange": true, // 默认关闭
+    "prohibitAutoAdd": ["json", "md", "yaml"], // 禁止.json .md文件，自动添加头部注释
+    "language": {
+      "js": {
+        "head": "/**", // 自定义注释头部
+        "middle": " * @", // 自定义注释中间部分(注意空格,这也是最终生成注释的一部分)
+        "end": " */", // 自定义注释尾部
+        "use": false // 是否使用自定义注释符号
+      }
+    }
+  },
+  "fileheader.customMade": {
+    "Author": "Shaohua Hu",
+    "Date": "Do not edit",
+    "LastEditors": "Shaohua Hu",
+    "LastEditTime": "Do not edit",
+    "FilePath": "Do not edit"
+  }
+}
