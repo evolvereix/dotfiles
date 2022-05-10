@@ -1,0 +1,6 @@
+set vertical-split = true
+set split-view-width = 60%
+set main-view-date = custom
+set main-view-date-format = "%Y-%m-%d %H:%M"
+set mouse = true
+set mouse-scroll = 1

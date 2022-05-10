@@ -4,7 +4,6 @@
     "algorizen.javascript-snippets",
     "antfu.icons-carbon",
     "christian-kohler.path-intellisense",
-    "DavidAnson.vscode-markdownlint",
     "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "EditorConfig.EditorConfig",
@@ -13,11 +12,8 @@
     "equinusocio.vsc-material-theme-icons",
     "esbenp.prettier-vscode",
     "GitHub.copilot",
-    "idleberg.applescript",
-    "jasonnutter.search-node-modules",
-    "johnsoncodehk.volar",
+    "Vue.volar",
     "mikestead.dotenv",
-    "ms-vscode.live-server",
     "naumovs.color-highlight",
     "OBKoro1.korofileheader",
     "octref.vetur",
@@ -27,8 +23,6 @@
     "usernamehw.errorlens",
     "VisualStudioExptTeam.vscodeintellicode",
     "WakaTime.vscode-wakatime",
-    "withfig.fig",
-    "xlthu.Pangu-Markdown",
-    "yzhang.markdown-all-in-one"
+    "withfig.fig"
   ]
 }

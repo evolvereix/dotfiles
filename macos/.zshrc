@@ -98,6 +98,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Pnpm
+export PNPM_HOME="/Users/zen/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -122,11 +126,18 @@ alias ll="ls -Al"
 # Some Tools
 alias c="clear"
 alias cat="bat"
+alias vim="nvim"
 alias go="git open"
 alias ping="ping -c 5"
 alias tree="tree --dirsfirst"
 alias ipi="ipconfig getifaddr en0"
 alias getpass="openssl rand -base64 12"
+
+opass() {
+  op item get $1 --fields label=username
+  op item get $1 --fields label=password
+  op item get $1 --field type=otp --format json | jq -r .totp
+}
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -134,6 +145,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 # McFly
 eval "$(mcfly init zsh)"
+# 1Password
+eval "$(op completion zsh)"; compdef _op op
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"

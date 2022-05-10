@@ -3,7 +3,6 @@
   "editor.fontSize": 13.5,
   "editor.wordWrap": "on",
   "editor.lineNumbers": "interval",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.suggestSelection": "first",
   "editor.find.addExtraSpaceOnTop": false,
@@ -18,17 +17,22 @@
   "workbench.editor.wrapTabs": true,
   "workbench.list.smoothScrolling": true,
   "workbench.editor.tabCloseButton": "left",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.iconTheme": "eq-material-theme-icons-palenight",
   "workbench.colorTheme": "Material Theme Palenight",
   "workbench.productIconTheme": "icons-carbon",
-  "workbench.preferredLightColorTheme": "Moxer Light",
+  "workbench.preferredLightColorTheme": "Material Theme Palenight",
   "workbench.preferredDarkColorTheme": "Material Theme Palenight",
   "window.autoDetectColorScheme": true,
+  "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": true,
   "debug.console.fontSize": 13,
+  "git.confirmSync": false,
   "git.untrackedChanges": "separate",
+  "git.timeline.showUncommitted": true,
   "scm.diffDecorationsGutterWidth": 2,
   "diffEditor.ignoreTrimWhitespace": false,
   "extensions.ignoreRecommendations": true,
@@ -36,9 +40,28 @@
   "css.lint.hexColorLength": "ignore",
   "css.format.spaceAroundSelectorSeparator": true,
   "emmet.showSuggestionsAsSnippets": true,
-  // Package Manager
-  "npm.packageManager": "pnpm",
-  "eslint.packageManager": "pnpm",
+  "search.exclude": {
+    "**/.git": true,
+    "**/.github": true,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/tmp": true,
+    "**/yarn.lock": true
+  },
+  // Path Intellisense
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  "eslint.quiet": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   // Terminal
   "terminal.external.osxExec": "iTerm.app",
@@ -59,6 +82,12 @@
   "prettier.tabWidth": 2,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "none",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   // ESLint
   "eslint.validate": [
     "javascript",
@@ -81,17 +110,6 @@
     "yaml": false,
     "plaintext": false
   },
-  "markdown.extension.toc.updateOnSave": false,
-  // markdownlint config
-  "markdownlint.config": {
-    // "no-inline-html": {
-    //   "allowed_elements": ["p", "img"]
-    // }
-    "no-inline-html": false,
-    "no-emphasis-as-header": false,
-    "no-duplicate-heading": false,
-    "first-line-heading": false
-  },
   "errorLens.excludeBySource": ["cSpell", "Grammarly", "eslint"],
   "cSpell.language": "en,en-US",
   "cSpell.allowCompoundWords": true,
@@ -103,8 +121,11 @@
     "pnpm",
     "shiqiao"
   ],
+  // Volar
+  "volar.takeOverMode.enabled": true,
   "volar.codeLens.scriptSetupTools": true,
   "volar.completion.preferredTagNameCase": "pascal",
+  // YAML
   "redhat.telemetry.enabled": false,
   // Comments
   "better-comments.tags": [
@@ -217,6 +238,17 @@
       "italic": false
     }
   ],
+  "markdown.extension.toc.updateOnSave": false,
+  // markdownlint config
+  "markdownlint.config": {
+    // "no-inline-html": {
+    //   "allowed_elements": ["p", "img"]
+    // }
+    "no-inline-html": false,
+    "no-emphasis-as-header": false,
+    "no-duplicate-heading": false,
+    "first-line-heading": false
+  },
   // FileHeader
   "fileheader.configObj": {
     "autoAdd": false, // 自动添加文件头部注释 开启才能自动添加
@@ -235,12 +267,5 @@
         "use": false // 是否使用自定义注释符号
       }
     }
-  },
-  "fileheader.customMade": {
-    "Author": "Shaohua Hu",
-    "Date": "Do not edit",
-    "LastEditors": "Shaohua Hu",
-    "LastEditTime": "Do not edit",
-    "FilePath": "Do not edit"
   }
 }
