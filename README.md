@@ -1,9 +1,10 @@
-<samp><b>Algorizen's Personal Dotfiles</b></samp>
+<samp><b>Personal Dotfiles</b></samp>
 
 <samp>iTerm2 theme and font</samp><br>
 <samp>Environment configuration file<samp>
   
-  [`macos/.zshrc`](./macos/.zshrc)
+  [`macos/.zshrc`](./macos/.zshrc)<br>
+  [`macos/.tigrc`](./macos/.tigrc)
 
 <samp>VS Code Settings<samp>
 
