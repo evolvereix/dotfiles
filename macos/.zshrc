@@ -120,8 +120,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # Some ls aliases
-alias la="ls -A"
-alias ll="ls -Al"
+alias la="exa --all --icons"
+alias ll="exa --all --long --header --group --links --icons"
+alias lt="exa --all --tree --group-directories-first --ignore-glob='node_modules|.git|.idea|.husky'"
 
 # Some Tools
 alias c="clear"

@@ -14,8 +14,7 @@
 <p align="center"><samp>Preview</samp></p>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/37773107/161374110-b958f9cb-fb36-457a-a273-250cfffeb537.png">
-<img src="https://user-images.githubusercontent.com/37773107/161374158-15597d95-8ea8-4fb2-b655-405506f91df1.png">
+<img alt="VS Code Preview" src="https://user-images.githubusercontent.com/37773107/169569946-77f2d6c1-520f-47a5-b3d5-db743580a329.png">
 </p>
 
 <br>
