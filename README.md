@@ -8,8 +8,8 @@
 
 <samp>VS Code Settings<samp>
 
-  [`.vscode/settings.json`](./.vscode/settings.json)<br>
-  [`.vscode/extensions.json`](./.vscode/extensions.json)
+  [`vscode/settings.json`](vscode/settings.json)<br>
+  [`vscode/extensions.json`](vscode/extensions.json)
 
 <br>
 <p align="center"><samp>Preview</samp></p>

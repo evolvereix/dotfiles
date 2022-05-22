@@ -73,7 +73,7 @@
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "underline",
-  "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+  "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.autoReplies": {
     "[Oh My Zsh] Would you like to check for updates? [Y/n]": "Y\r"
