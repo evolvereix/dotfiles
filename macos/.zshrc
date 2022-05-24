@@ -72,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode xcode autojump fd fig git-open F-Sy-H zsh-autosuggestions)
+plugins=(git vscode xcode autojump fd fig ripgrep git-open F-Sy-H zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,15 +130,8 @@ alias cat="bat"
 alias vim="nvim"
 alias go="git open"
 alias ping="ping -c 5"
-alias tree="tree --dirsfirst"
 alias ipi="ipconfig getifaddr en0"
 alias getpass="openssl rand -base64 12"
-
-opass() {
-  op item get $1 --fields label=username
-  op item get $1 --fields label=password
-  op item get $1 --field type=otp --format json | jq -r .totp
-}
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"

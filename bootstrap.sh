@@ -11,6 +11,7 @@ brew update
 # Some git defaults
 git config --global color.ui true
 git config --global push.default simple
+git config --global core.excludesfile ~/.gitignore
 
 # Install nvm
 echo "Installing nvm..."
@@ -34,18 +35,24 @@ nvm alias default stable
 
 # Plugins
 plugins=(
-  tig
+  autojump
+  bat
+  exa
+  fd
+  fig
   git-open
   jq
-  bat
-  tree
   mcfly
+  neovim
+  pnpm
+  ripgrep
   starship
-  fig
-  autojump
+  tig
+  tree-sitter
+  xz
+  yarn
   zsh-autosuggestions
   zsh-syntax-highlighting
-  pnpm
 )
 
 # Install plugins
@@ -61,3 +68,5 @@ mkdir ~/Developer
 # Source dot file
 echo '. ~/.dotfiles/macos/.zshrc' >> ~/.zshrc
 source ~/.zshrc
+echo '. ~/.dotfiles/macos/.tig' >> ~/.tig
+echo '. ~/.dotfiles/macos/.gitignore' >> ~/.gitignore

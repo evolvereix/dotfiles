@@ -1,0 +1,11 @@
+[color]
+	ui = true
+[push]
+	default = simple
+[user]
+	email = 0x11cb@gmail.com
+	name = zen
+[open "https://git.example.com"]
+	protocol = http
+[core]
+	excludesfile = /Users/zen/.gitignore

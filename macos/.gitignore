@@ -1,0 +1,9 @@
+# git config --global core.excludesfile ~/.gitignore
+
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+.vscode
+.idea
+Thumbs.db
