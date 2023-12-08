@@ -14,11 +14,9 @@
     "equinusocio.vsc-material-theme-icons",
     "esbenp.prettier-vscode",
     "GitHub.codespaces",
+    "GitHub.copilot",
     "GitHub.copilot-chat",
-    "GitHub.copilot-nightly",
     "mikestead.dotenv",
-    "ms-vscode-remote.remote-ssh",
-    "ms-vscode.remote-explorer",
     "naumovs.color-highlight",
     "pranaygp.vscode-css-peek",
     "SimonSiefke.svg-preview",
@@ -27,6 +25,6 @@
     "usernamehw.errorlens",
     "VisualStudioExptTeam.vscodeintellicode",
     "WakaTime.vscode-wakatime",
-    "withfig.fig"
+    "yoavbls.pretty-ts-errors"
   ]
 }
