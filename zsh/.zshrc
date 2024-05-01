@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -72,9 +70,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode xcode autojump fd fig ripgrep git-open F-Sy-H zsh-autosuggestions)
+plugins=(git z vscode xcode fd git-open F-Sy-H zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+
+source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 # User configuration
 
@@ -99,8 +99,47 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Pnpm
-export PNPM_HOME="/Users/zen/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# fd instead of fzf
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+source ~/fzf-git.sh/fzf-git.sh
+
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --git-ignore --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --git-ignore --color=always {} | head -200'"
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --git-ignore --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+
+# Bat
+export BAT_THEME="Sublime Snazzy"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -119,11 +158,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# Some ls aliases
-alias la="exa --all --icons"
-alias ll="exa --all --long --header --group --links --icons"
-alias lt="exa --all --tree --group-directories-first --ignore-glob='node_modules|.git|.idea|.husky'"
-
 # Some Tools
 alias c="clear"
 alias cat="bat"
@@ -132,15 +166,18 @@ alias go="git open"
 alias ping="ping -c 5"
 alias ipi="ipconfig getifaddr en0"
 alias getpass="openssl rand -base64 12"
+# zoxide
+alias cd="z"
+# eza
+alias lls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # Starship
 eval "$(starship init zsh)"
-# McFly
-eval "$(mcfly init zsh)"
 # 1Password
 eval "$(op completion zsh)"; compdef _op op
-
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
+# fzf
+eval "$(fzf --zsh)"
+# zoxide
+eval "$(zoxide init zsh)"

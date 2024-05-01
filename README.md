@@ -7,7 +7,7 @@
 <p align="center"><samp>Preview</samp></p>
 
 <p align="center">
-<img alt="VS Code Preview" src="https://user-images.githubusercontent.com/37773107/230699174-c372f276-ebbd-4657-aee9-333e540093e7.png">
+<img alt="VS Code Preview" src="https://github.com/evolvereix/dotfiles/assets/37773107/76759752-79b9-4f7f-a84d-25ced44d4d72">
 </p>
 
 <br>

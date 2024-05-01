@@ -3,9 +3,18 @@
 [push]
 	default = simple
 [user]
-	email = 0x11cb@gmail.com
 	name = zen
-[open "https://git.example.com"]
-	protocol = http
+	email = 0x11cb@gmail.com
+	signingkey = ssh-ed25519 EXAMPLE_KEY
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [core]
-	excludesfile = /Users/zen/.gitignore
+	excludesfile = $HOME/.gitignore
+# [open "https://git.example.com"]
+	# protocol = http
+# [includeIf "gitdir:~/work/acme/"]
+	# path = gitdir:~/work/acme/.gitconfig
