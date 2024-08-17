@@ -14,6 +14,8 @@
 	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [core]
 	excludesfile = $HOME/.gitignore
+[alias]
+	logs = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(cyan)%an <%aE>%Creset' --abbrev-commit
 # [open "https://git.example.com"]
 	# protocol = http
 # [includeIf "gitdir:~/work/acme/"]
