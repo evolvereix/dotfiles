@@ -70,11 +70,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z vscode xcode fd git-open F-Sy-H zsh-autosuggestions)
+plugins=(git z vscode xcode git-open F-Sy-H zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-
-source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 # User configuration
 
