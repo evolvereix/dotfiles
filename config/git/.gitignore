@@ -1,4 +1,4 @@
-# git config --global core.excludesfile ~/.gitignore
+# git config --global core.excludesfile ~/.config/git/.gitignore
 
 .DS_Store
 ._.DS_Store
