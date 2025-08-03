@@ -66,9 +66,9 @@ brew bundle --file=config/homebrew/Brewfile
 - **CleanShot**: 截图工具
 - **Raycast**: 启动器和生产力工具
 - **Notion**: 笔记和协作工具
-- **Trae**: AI 代码编辑器
 
 ### 主题和外观
+
 - **iTerm2 主题**: Dracula, PaperColor, Solarized
 - **VS Code 主题**: Vira 主题
 

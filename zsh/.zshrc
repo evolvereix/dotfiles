@@ -35,6 +35,14 @@ shell_proxy() {
   export all_proxy=socks5://127.0.0.1:6153
 }
 
+unset_proxy() {
+  unset https_proxy
+  unset http_proxy
+  unset all_proxy
+}
+
+[[ -o interactive ]] && shell_proxy
+
 # make aliases sudo-able
 alias sudo='sudo '
 

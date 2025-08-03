@@ -8,7 +8,7 @@
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "github.copilot",
+    "github.codespaces",
     "github.copilot-chat",
     "mikestead.dotenv",
     "naumovs.color-highlight",
@@ -19,7 +19,6 @@
     "styled-components.vscode-styled-components",
     "usernamehw.errorlens",
     "vira.vsc-vira-theme",
-    "visualstudioexptteam.vscodeintellicode",
     "wakatime.vscode-wakatime",
     "yoavbls.pretty-ts-errors"
   ]
