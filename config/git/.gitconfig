@@ -2,18 +2,20 @@
 	ui = true
 [push]
 	default = simple
-[user]
-	name = zen
-	email = 0x11cb@gmail.com
-	signingkey = ssh-ed25519 EXAMPLE_KEY
-[commit]
-	gpgsign = true
+	autoSetupRemote = true
+[core]
+	ignorecase = false
+	excludesfile = ~/.config/git/.gitignore
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-[core]
-	excludesfile = $HOME/.gitignore
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[user]
+	signingkey = ssh-ed25519 EXAMPLE_KEY
+	name = zen
+	email = 0x11cb@gmail.com
 [alias]
 	logs = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(cyan)%an <%aE>%Creset' --abbrev-commit
 # [open "https://git.example.com"]

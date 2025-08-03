@@ -1,0 +1,22 @@
+cask "surge"
+cask "1password"
+
+brew "mise"
+brew "starship"
+brew "displayplacer"
+
+cask "trae"
+cask "arc"
+cask "cleanshot"
+cask "doubao"
+cask "feishu"
+cask "fork"
+cask "google-chrome"
+cask "ogdesign-eagle"
+cask "notion"
+cask "rapidapi"
+cask "thebrowsercompany-dia"
+cask "visual-studio-code"
+cask "webstorm"
+
+tap "buo/cask-upgrade"
