@@ -58,6 +58,7 @@ brew bundle --file=config/homebrew/Brewfile
   - zsh-autosuggestions: 命令自动建议
   - zsh-syntax-highlighting: 语法高亮
   - zsh-autocomplete: 自动补全
+  - git-open: 从命令行打开当前仓库的远程页面
 
 ### 应用程序
 
@@ -134,4 +135,18 @@ dotfiles/
 cd ~/dotfiles
 git pull
 ./install.sh
+```
+
+## 💾 备份 Homebrew 软件
+
+Homebrew 安装的软件可以通过 `brew bundle dump` 生成 Brewfile 备份：
+
+```bash
+brew bundle dump --file=~/config/homebrew/Brewfile --force
+```
+
+这个命令会把当前已安装的 taps、formulae、casks 写入 `~/config/homebrew/Brewfile`。后续在新机器上执行下面命令即可恢复安装：
+
+```bash
+brew bundle --file=~/config/homebrew/Brewfile
 ```
