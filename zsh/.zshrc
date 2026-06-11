@@ -4,15 +4,12 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ZSH_THEME="robbyrussell"
 
-CASE_SENSITIVE="true"
-
 plugins=(
   git
   git-open
   vscode
   xcode
   z
-  zsh-autocomplete
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -21,6 +18,9 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+# ai-drw CLI
+export PATH="$HOME/.ai-drw/bin:$PATH"
 
 # Pnpm
 export PNPM_HOME="$HOME/Library/pnpm"

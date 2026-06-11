@@ -1,5 +1,6 @@
 tap "buo/cask-upgrade"
 
+brew "bat"
 brew "mise"
 brew "starship"
 

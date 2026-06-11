@@ -1,0 +1,66 @@
+# 可读性
+font-family = SF Mono
+font-size = 14
+font-thicken = false
+adjust-cell-height = 12%
+
+# 主题与对比度
+theme = light:Palenight,dark:Anthracite
+minimum-contrast = 1.1
+window-colorspace = display-p3
+background-opacity = 1.0
+
+# 窗口与外观
+window-width = 132
+window-height = 38
+window-step-resize = true
+window-padding-x = 8
+window-padding-y = 6
+window-padding-balance = true
+macos-titlebar-style = transparent
+macos-icon = custom
+macos-custom-icon = ~/.config/ghostty/icons/nord.icns
+
+# 光标与鼠标
+cursor-style = underline
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = precision:1,discrete:3
+
+# 滚动
+scrollbar = system
+scrollback-limit = 134217728
+
+# Shell 集成
+shell-integration = detect
+shell-integration-features = no-cursor,sudo,title,ssh-env,path
+window-inherit-working-directory = true
+tab-inherit-working-directory = true
+split-inherit-working-directory = true
+
+# 剪贴板与安全
+clipboard-read = ask
+clipboard-write = allow
+clipboard-paste-protection = true
+clipboard-trim-trailing-spaces = true
+copy-on-select = false
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+
+# 通知
+notify-on-command-finish = unfocused
+notify-on-command-finish-after = 20s
+notify-on-command-finish-action = notify,no-bell
+
+# 链接
+link-url = true
+link-previews = true
+
+# 行为
+window-save-state = never
+confirm-close-surface = true
+quit-after-last-window-closed = false
+auto-update = off
+
+# 快捷键
+keybind = super+k=unbind
+keybind = super+k=text:\x0c

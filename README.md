@@ -1,152 +1,149 @@
 <samp><b>Dotfiles</b></samp>
 
-<sub><samp>&nbsp;&nbsp;My Mac Setup | <a href="https://blog.evolvereix.com/Mac-89c09a1c74e9487e85f8829bba3addf1">Mac</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</samp></sub>
+<sub><samp>Personal macOS setup for terminal, developer tools, editors, and app preferences.</samp></sub>
 
 <br>
+
 <p align="center"><samp>Preview</samp></p>
 
 <p align="center">
-<img alt="VS Code Preview" src="https://github.com/evolvereix/dotfiles/assets/37773107/76759752-79b9-4f7f-a84d-25ced44d4d72">
+  <img alt="VS Code Preview" src="https://github.com/evolvereix/dotfiles/assets/37773107/76759752-79b9-4f7f-a84d-25ced44d4d72">
 </p>
 
-<br>
-
-## 🚀 快速开始
-
-### 一键安装
+## 快速开始
 
 ```bash
-# 克隆仓库
-git clone https://github.com/your-username/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone git@github.com:evolvereix/dotfiles.git ~/Developer/dotfiles
+cd ~/Developer/dotfiles
 
-# 运行安装脚本
 chmod +x install.sh
 ./install.sh
 ```
 
-### 手动安装
+安装脚本可以重复执行。目标配置文件已经存在且内容不同时，脚本会先备份到：
 
-如果你想要更多控制，可以分步骤执行：
+```text
+~/.dotfiles-backup/<timestamp>/
+```
+
+如果只想同步配置文件：
 
 ```bash
-# 1. 安装 Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# 2. 安装软件包
-brew bundle --file=config/homebrew/Brewfile
-
-# 3. 复制配置文件
-./install.sh  # 或者手动复制配置文件
+./install.sh --configs-only
 ```
 
-## 📦 包含的软件和配置
+## 安装参数
 
-### 开发工具
-
-- **Homebrew**: macOS 包管理器
-- **mise**: 运行时版本管理器 (Node.js, Python 等)
-- **Git**: 版本控制系统，包含自定义配置
-- **Visual Studio Code**: 代码编辑器，包含扩展和设置
-- **WebStorm**: JetBrains IDE
-
-### 终端环境
-
-- **Oh My Zsh**: Zsh 框架
-- **Starship**: 跨平台命令行提示符
-- **Zsh 插件**:
-  - zsh-autosuggestions: 命令自动建议
-  - zsh-syntax-highlighting: 语法高亮
-  - zsh-autocomplete: 自动补全
-  - git-open: 从命令行打开当前仓库的远程页面
-
-### 应用程序
-
-- **1Password**: 密码管理器
-- **Arc**: 现代浏览器
-- **CleanShot**: 截图工具
-- **Raycast**: 启动器和生产力工具
-- **Notion**: 笔记和协作工具
-
-### 主题和外观
-
-- **iTerm2 主题**: Dracula, PaperColor, Solarized
-- **VS Code 主题**: Vira 主题
-
-## 🛠️ 自定义配置
-
-### Git 配置
-
-- 启用 GPG 签名 (使用 1Password SSH 密钥)
-- 自定义别名和日志格式
-- 全局 gitignore 文件
-
-### Zsh 配置
-
-- 自定义别名和函数
-- 代理设置函数
-- PNPM 路径配置
-
-### VS Code 配置
-
-- 精选的扩展包
-- 优化的编辑器设置
-- 代码格式化和 linting 配置
-
-## 📁 目录结构
-
-```
-dotfiles/
-├── install.sh              # 主安装脚本
-├── config/
-│   ├── git/               # Git 配置文件
-│   ├── homebrew/          # Homebrew Brewfile
-│   ├── mise/              # Mise 配置
-│   └── starship.toml      # Starship 配置
-├── vscode/                # VS Code 设置和扩展
-├── zsh/                   # Zsh 配置
-├── theme/                 # 终端主题文件
-└── iterm/                 # iTerm2 配置
-```
-
-## 🔧 安装脚本功能
-
-`install.sh` 脚本会自动执行以下操作：
-
-1. **系统检查**: 验证是否为 macOS 系统
-2. **Xcode Tools**: 安装 Xcode Command Line Tools
-3. **Homebrew**: 安装 Homebrew 包管理器
-4. **软件包**: 通过 Brewfile 安装所有应用和工具
-5. **Oh My Zsh**: 安装 Zsh 框架和插件
-6. **配置复制**: 复制所有配置文件到相应位置
-
-## ⚠️ 注意事项
-
-- 脚本会修改系统设置，请在运行前备份重要数据
-- 某些应用可能需要手动登录和配置
-- Git 配置中的 GPG 签名需要配置 1Password SSH 密钥
-- 首次运行可能需要较长时间，取决于网络速度
-
-## 🔄 更新配置
-
-要更新配置，只需拉取最新代码并重新运行脚本：
+查看完整帮助：
 
 ```bash
-cd ~/dotfiles
-git pull
+./install.sh --help
+```
+
+常用模式：
+
+```bash
+# 新机器完整初始化
 ./install.sh
+
+# 只同步 dotfiles 和应用配置
+./install.sh --configs-only
+
+# 安装软件包，但跳过 VS Code 扩展安装
+./install.sh --skip-vscode-extensions
+
+# 指定本次备份目录
+DOTFILES_BACKUP_DIR=~/Desktop/dotfiles-backup ./install.sh --configs-only
 ```
 
-## 💾 备份 Homebrew 软件
+可用参数：
 
-Homebrew 安装的软件可以通过 `brew bundle dump` 生成 Brewfile 备份：
+- `--configs-only`: 只同步 dotfiles 和应用配置。
+- `--skip-brew`: 跳过 Homebrew 安装和更新。
+- `--skip-packages`: 跳过 `Brewfile` 软件包安装。
+- `--skip-oh-my-zsh`: 跳过 Oh My Zsh 安装。
+- `--skip-zsh-plugins`: 跳过 zsh 插件安装。
+- `--skip-configs`: 跳过配置文件同步。
+- `--skip-vscode-extensions`: 跳过 VS Code 推荐扩展安装。
+
+## 脚本做什么
+
+`install.sh` 会按顺序执行：
+
+1. 检查当前系统是否为 macOS。
+2. 检查并安装 Xcode Command Line Tools。
+3. 安装或更新 Homebrew。
+4. 使用 [config/homebrew/Brewfile](config/homebrew/Brewfile) 安装软件包。
+5. 安装 Oh My Zsh。
+6. 安装 [zsh/.zshrc](zsh/.zshrc) 中使用的插件：`git-open`、`zsh-autosuggestions`、`zsh-syntax-highlighting`。
+7. 同步 dotfiles 和应用配置。
+8. 如果 `code` CLI 可用，安装 VS Code 推荐扩展。
+
+## 配置映射
+
+| 仓库路径 | 安装位置 |
+| --- | --- |
+| `config/git/.gitconfig` | `~/.gitconfig` |
+| `config/git/.gitignore` | `~/.config/git/.gitignore` |
+| `zsh/.zshrc` | `~/.zshrc` |
+| `config/starship.toml` | `~/.config/starship.toml` |
+| `config/mise/config.toml` | `~/.config/mise/config.toml` |
+| `config/bat/config` | `~/.config/bat/config` |
+| `config/ghostty/config.ghostty` | `~/.config/ghostty/config` |
+| `config/ghostty/themes` | `~/.config/ghostty/themes` |
+| `config/ghostty/icons` | `~/.config/ghostty/icons` |
+| `vscode/settings.json` | `~/Library/Application Support/Code/User/settings.json` |
+| `vscode/extensions.json` | `~/Library/Application Support/Code/User/extensions.json` |
+
+## 包含内容
+
+终端环境：
+
+- Ghostty 配置、主题和自定义图标。
+- Oh My Zsh，以及 Git、VS Code、Xcode、`z`、`git-open`、autosuggestions、syntax highlighting 插件。
+- Starship prompt。
+- bat 的 Nord 主题、行号、git changes 和 header 样式。
+
+开发工具：
+
+- mise：Node.js 22、最新版 pnpm、最新版 Go。
+- Git 默认配置、别名、全局 ignore，以及基于 1Password SSH key 的 commit signing。
+- VS Code 设置和推荐扩展。
+
+Homebrew 应用和工具：
+
+- `mise`、`starship`、`bat`
+- 1Password、Surge、Ghostty、Claude、Claude Code、ChatGPT、Codex、Codex App
+- Notion、CleanShot、RapidAPI、Fork、SF Symbols、Dia
+- Visual Studio Code、IntelliJ IDEA、Android Platform Tools
+- 飞书、Figma、Google Chrome、MWeb Pro、Eagle、WeChat
+
+## 注意事项
+
+- 新机器安装前，先检查 [config/git/.gitconfig](config/git/.gitconfig)，把示例 `user.signingkey` 换成自己的 1Password SSH signing key。
+- [zsh/.zshrc](zsh/.zshrc) 默认会在交互式 shell 中开启本地代理，不需要的话可以删掉或调整 `shell_proxy`。
+- VS Code 扩展只有在 `code` 命令可用时才会自动安装；否则脚本只会复制推荐扩展列表。
+- Ghostty 源文件在仓库中叫 `config.ghostty`，安装时会写入 Ghostty 标准路径：`~/.config/ghostty/config`。
+
+## 更新
 
 ```bash
-brew bundle dump --file=~/config/homebrew/Brewfile --force
+cd ~/Developer/dotfiles
+git pull
+
+# 完整更新
+./install.sh
+
+# 只刷新本地配置
+./install.sh --configs-only
 ```
 
-这个命令会把当前已安装的 taps、formulae、casks 写入 `~/config/homebrew/Brewfile`。后续在新机器上执行下面命令即可恢复安装：
+## 更新 Brewfile
+
+本机 Homebrew 软件变化后，可以用下面命令刷新仓库中的 Brewfile：
 
 ```bash
-brew bundle --file=~/config/homebrew/Brewfile
+brew bundle dump --file=config/homebrew/Brewfile --force
 ```
+
+提交前先检查 diff，避免把临时安装的软件写进去。
