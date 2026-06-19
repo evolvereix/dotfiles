@@ -1,11 +1,13 @@
 # 可读性
 font-family = SF Mono
-font-size = 14
+font-size = 13.5
 font-thicken = false
 adjust-cell-height = 12%
 
 # 主题与对比度
-theme = light:Palenight,dark:Anthracite
+# theme = light:Palenight,dark:Anthracite
+theme = Nord
+# theme = Palenight
 minimum-contrast = 1.1
 window-colorspace = display-p3
 background-opacity = 1.0
@@ -33,8 +35,8 @@ scrollback-limit = 134217728
 # Shell 集成
 shell-integration = detect
 shell-integration-features = no-cursor,sudo,title,ssh-env,path
-window-inherit-working-directory = true
-tab-inherit-working-directory = true
+window-inherit-working-directory = false
+tab-inherit-working-directory = false
 split-inherit-working-directory = true
 
 # 剪贴板与安全

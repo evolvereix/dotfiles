@@ -1,3 +1,4 @@
 --theme="Nord"
---style="numbers,changes,header"
+--style="full"
 --paging=auto
+--map-syntax="*.ghostty:INI"
