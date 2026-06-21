@@ -1,10 +1,10 @@
-background = #292D3E
+background = #242633
 foreground = #CED1E3
-selection-background = #555C82
+selection-background = #3C415B
 selection-foreground = #CED1E3
-cursor-color = #FFCC00
-cursor-text = #292D3E
-palette = 0=#676E95
+cursor-color = #FFCB6B
+cursor-text = #000000
+palette = 0=#000000
 palette = 1=#F07178
 palette = 2=#C3E88D
 palette = 3=#FFCB6B
@@ -19,4 +19,4 @@ palette = 11=#FFCB6B
 palette = 12=#82AAFF
 palette = 13=#C792EA
 palette = 14=#89DDFF
-palette = 15=#ffffff
+palette = 15=#CED1E3

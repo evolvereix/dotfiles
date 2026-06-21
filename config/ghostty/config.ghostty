@@ -6,15 +6,17 @@ adjust-cell-height = 12%
 
 # 主题与对比度
 # theme = light:Palenight,dark:Anthracite
-theme = Nord
-# theme = Palenight
+# theme = Nord
+theme = Anthracite
 minimum-contrast = 1.1
 window-colorspace = display-p3
 background-opacity = 1.0
 
 # 窗口与外观
-window-width = 132
-window-height = 38
+# window-width = 132
+# window-height = 38
+window-width = 160
+window-height = 44
 window-step-resize = true
 window-padding-x = 8
 window-padding-y = 6
@@ -30,7 +32,7 @@ mouse-scroll-multiplier = precision:1,discrete:3
 
 # 滚动
 scrollbar = system
-scrollback-limit = 134217728
+scrollback-limit = 67108864
 
 # Shell 集成
 shell-integration = detect
@@ -51,7 +53,7 @@ macos-secure-input-indication = true
 # 通知
 notify-on-command-finish = unfocused
 notify-on-command-finish-after = 20s
-notify-on-command-finish-action = notify,no-bell
+notify-on-command-finish-action = notify,bell
 
 # 链接
 link-url = true
