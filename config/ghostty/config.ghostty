@@ -5,8 +5,6 @@ font-thicken = false
 adjust-cell-height = 12%
 
 # 主题与对比度
-# theme = light:Palenight,dark:Anthracite
-# theme = Nord
 theme = Anthracite
 minimum-contrast = 1.1
 window-colorspace = display-p3
@@ -15,7 +13,7 @@ background-opacity = 1.0
 # 窗口与外观
 # window-width = 132
 # window-height = 38
-window-width = 160
+window-width = 168
 window-height = 44
 window-step-resize = true
 window-padding-x = 8
@@ -23,7 +21,7 @@ window-padding-y = 6
 window-padding-balance = true
 macos-titlebar-style = transparent
 macos-icon = custom
-macos-custom-icon = ~/.config/ghostty/icons/nord.icns
+macos-custom-icon = ~/.config/ghostty/icons/anthracite.icns
 
 # 光标与鼠标
 cursor-style = underline
@@ -46,7 +44,7 @@ clipboard-read = ask
 clipboard-write = allow
 clipboard-paste-protection = true
 clipboard-trim-trailing-spaces = true
-copy-on-select = false
+copy-on-select = clipboard
 macos-auto-secure-input = true
 macos-secure-input-indication = true
 
@@ -63,6 +61,7 @@ link-previews = true
 window-save-state = never
 confirm-close-surface = true
 quit-after-last-window-closed = false
+window-new-tab-position = end
 auto-update = off
 
 # 快捷键
