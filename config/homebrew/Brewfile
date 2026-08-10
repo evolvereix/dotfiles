@@ -1,8 +1,9 @@
-tap "buo/cask-upgrade"
+tap "buo/cask-upgrade", trusted: true
 
 brew "bat"
 brew "mise"
 brew "starship"
+brew "btop"
 
 cask "surge"
 cask "1password"
