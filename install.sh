@@ -330,6 +330,11 @@ sync_configs() {
   sync_file "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
   sync_file "$DOTFILES_DIR/config/mise/config.toml" "$HOME/.config/mise/config.toml"
   sync_file "$DOTFILES_DIR/config/bat/config" "$HOME/.config/bat/config"
+  sync_file "$DOTFILES_DIR/config/btop/btop.conf" "$HOME/.config/btop/btop.conf"
+  sync_file "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
+  sync_file "$DOTFILES_DIR/config/herdr/config.toml" "$HOME/.config/herdr/config.toml"
+  sync_file "$DOTFILES_DIR/config/1Password/ssh/agent.toml" "$HOME/.config/1Password/ssh/agent.toml"
+  sync_dir "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
   sync_file "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   sync_file "$DOTFILES_DIR/vscode/extensions.json" "$HOME/Library/Application Support/Code/User/extensions.json"
 

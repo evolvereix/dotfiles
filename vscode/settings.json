@@ -1,11 +1,14 @@
 {
-  "update.mode": "none",
+  // [Updates]
+  "update.mode": "manual",
+  // [Editor]
   "editor.tabSize": 2,
   "editor.fontSize": 13.5,
   "editor.lineHeight": 1.6,
   "editor.wordWrap": "off",
   "editor.lineNumbers": "interval",
   "editor.fontFamily": "'SF Mono', 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.minimap.enabled": false,
   "editor.find.addExtraSpaceOnTop": false,
   "editor.accessibilitySupport": "off",
@@ -23,13 +26,41 @@
   "editor.stickyScroll.maxLineCount": 20,
   "editor.scrollbar.horizontalScrollbarSize": 8,
   "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.tokenColorCustomizations": {
+    "[Vira*]": {
+      "textMateRules": [
+        {
+          "scope": [
+            "meta.block"
+          ],
+          "settings": {
+            "foreground": "#ABB2BF"
+          }
+        }
+      ]
+    }
+  },
+  "notebook.stickyScroll.enabled": true,
+  // "editor.suggestSelection": "recentlyUsedByPrefix",
+  // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // [Breadcrumbs]
   "breadcrumbs.symbolPath": "off",
+  "breadcrumbs.showEditorType": true,
+  // [Bracket Pairs]
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.enabled": true,
+  // [Accessibility]
   "accessibility.signals.onDebugBreak": {
     "sound": "on"
   },
-  "interactiveWindow.promptToSaveOnClose": true,
+  // [Workbench & Theme]
+  "workbench.browser.autoReloadOnFileChange": true,
   "workbench.settings.alwaysShowAdvancedSettings": true,
-  "workbench.startupEditor": "agentSessionsWelcomePage",
   "workbench.fontAliasing": "auto",
   "workbench.tree.indent": 10,
   "workbench.tree.enableStickyScroll": true,
@@ -41,29 +72,16 @@
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.tabActionLocation": "left",
   "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.useModal": "off",
   "workbench.editor.highlightModifiedTabs": true,
+  "workbench.browser.openLocalhostLinks": true,
+  "workbench.browser.newTabPlacement": "sideGroup",
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
   "workbench.iconTheme": "vira-icons-palenight",
   "workbench.colorTheme": "Vira Palenight",
-  "viraTheme.solidLineHighlight": true,
-  "viraTheme.showBorders": false,
-  "editor.tokenColorCustomizations": {
-    "[Vira*]": {
-      "textMateRules": [
-        {
-          "scope": ["meta.block"],
-          "settings": { "foreground": "#ABB2BF" }
-        }
-      ]
-    }
-  },
-  // "editor.suggestSelection": "recentlyUsedByPrefix",
-  // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "notebook.stickyScroll.enabled": true,
-  // [BracketPairs]
-  "editor.bracketPairColorization.enabled": false,
-  "editor.guides.bracketPairs": "active",
+  "workbench.productIconTheme": "viraOutline",
+  "viraTheme.hidesExplorerArrows": false,
   "workbench.colorCustomizations": {
     "editorIndentGuide.background1": "#4B4D5666",
     "editorIndentGuide.activeBackground1": "#C678DD99",
@@ -82,8 +100,73 @@
     "editorBracketHighlight.unexpectedBracket.foreground": "#E06C75",
     "editorBracketMatch.foreground": "#ABB2BF",
     "editorBracketMatch.border": "#80CBC433",
+    "toolbar.activeBackground": "#80CBC426",
+    "activityBarBadge.background": "#80CBC4",
+    "activityBar.activeBorder": "#80CBC4",
+    "activityBarTop.activeBorder": "#80CBC4",
+    "list.inactiveSelectionIconForeground": "#80CBC4",
+    "list.activeSelectionForeground": "#80CBC4",
+    "list.inactiveSelectionForeground": "#80CBC4",
+    "list.highlightForeground": "#80CBC4",
+    "sash.hoverBorder": "#80CBC480",
+    "list.activeSelectionIconForeground": "#80CBC4",
+    "scrollbarSlider.activeBackground": "#80CBC480",
+    "editorSuggestWidget.highlightForeground": "#80CBC4",
+    "textLink.foreground": "#80CBC4",
+    "progressBar.background": "#80CBC4",
+    "pickerGroup.foreground": "#80CBC4",
+    "tab.activeBorder": "#80CBC4",
+    "notificationLink.foreground": "#80CBC4",
+    "editorWidget.resizeBorder": "#80CBC4",
+    "editorWidget.border": "#80CBC4",
+    "settings.modifiedItemIndicator": "#80CBC4",
+    "panelTitle.activeBorder": "#80CBC4",
+    "breadcrumb.activeSelectionForeground": "#80CBC4",
+    "menu.selectionForeground": "#80CBC4",
+    "menubar.selectionForeground": "#80CBC4",
+    "editor.findMatchBorder": "#80CBC4",
+    "selection.background": "#80CBC440",
+    "statusBarItem.remoteBackground": "#80CBC414",
+    "notebook.inactiveFocusedCellBorder": "#80CBC480",
+    "button.background": "#80CBC4",
+    "button.hoverBackground": "#80CBC4cc",
+    "extensionButton.separator": "#80CBC433",
+    "extensionButton.background": "#80CBC414",
+    "extensionButton.foreground": "#80CBC4",
+    "extensionButton.hoverBackground": "#80CBC433",
+    "extensionButton.prominentForeground": "#80CBC4",
+    "extensionButton.prominentBackground": "#80CBC414",
+    "extensionButton.prominentHoverBackground": "#80CBC433",
+    "statusBarItem.remoteHoverBackground": "#80CBC4",
+    "statusBarItem.remoteForeground": "#80CBC4",
+    "chat.slashCommandForeground": "#80CBC4",
+    "chat.avatarForeground": "#80CBC4",
+    "activityBarBadge.foreground": "#000000",
+    "button.foreground": "#000000",
+    "statusBarItem.remoteHoverForeground": "#000000",
+    "tab.activeBorderTop": "#80CBC400",
+    "tab.unfocusedActiveBorder": "#80CBC4",
+    "tab.unfocusedActiveBorderTop": "#80CBC400",
+    "tab.activeModifiedBorder": "#80CBC400",
+    "statusBar.debuggingBackground": "#80CBC433",
+    "statusBar.debuggingForeground": "#80CBC4",
+    "editor.lineHighlightBackground": "#ffffff0f",
+    "editor.lineHighlightBorder": "#ffffff00",
+    "extensionButton.border": "#80CBC414",
     "[Vira*]": {
+      "statusBar.debuggingBackground": "#80CBC433",
+      "statusBar.debuggingForeground": "#80CBC4",
       "toolbar.activeBackground": "#80CBC426",
+      "button.background": "#80CBC4",
+      "button.hoverBackground": "#80CBC4cc",
+      "extensionButton.separator": "#80CBC433",
+      "extensionButton.background": "#80CBC414",
+      "extensionButton.border": "#80CBC414",
+      "extensionButton.foreground": "#80CBC4",
+      "extensionButton.hoverBackground": "#80CBC433",
+      "extensionButton.prominentForeground": "#80CBC4",
+      "extensionButton.prominentBackground": "#80CBC414",
+      "extensionButton.prominentHoverBackground": "#80CBC433",
       "activityBarBadge.background": "#80CBC4",
       "activityBar.activeBorder": "#80CBC4",
       "activityBarTop.activeBorder": "#80CBC4",
@@ -99,6 +182,10 @@
       "progressBar.background": "#80CBC4",
       "pickerGroup.foreground": "#80CBC4",
       "tab.activeBorder": "#80CBC4",
+      "tab.activeBorderTop": "#80CBC400",
+      "tab.unfocusedActiveBorder": "#80CBC4",
+      "tab.unfocusedActiveBorderTop": "#80CBC400",
+      "tab.activeModifiedBorder": "#80CBC400",
       "notificationLink.foreground": "#80CBC4",
       "editorWidget.resizeBorder": "#80CBC4",
       "editorWidget.border": "#80CBC4",
@@ -110,42 +197,23 @@
       "editor.findMatchBorder": "#80CBC4",
       "selection.background": "#80CBC440",
       "statusBarItem.remoteBackground": "#80CBC414",
-      "notebook.inactiveFocusedCellBorder": "#80CBC480",
-      "commandCenter.activeBorder": "#80CBC480",
-      "button.background": "#80CBC4",
-      "button.hoverBackground": "#80CBC4cc",
-      "extensionButton.separator": "#80CBC433",
-      "extensionButton.background": "#80CBC414",
-      "extensionButton.foreground": "#80CBC4",
-      "extensionButton.hoverBackground": "#80CBC433",
-      "extensionButton.prominentForeground": "#80CBC4",
-      "extensionButton.prominentBackground": "#80CBC414",
-      "extensionButton.prominentHoverBackground": "#80CBC433",
       "statusBarItem.remoteHoverBackground": "#80CBC4",
       "statusBarItem.remoteForeground": "#80CBC4",
+      "notebook.inactiveFocusedCellBorder": "#80CBC480",
       "chat.slashCommandForeground": "#80CBC4",
       "chat.avatarForeground": "#80CBC4",
       "activityBarBadge.foreground": "#000000",
       "button.foreground": "#000000",
-      "statusBarItem.remoteHoverForeground": "#000000",
-      "tab.activeBorderTop": "#80CBC400",
-      "tab.unfocusedActiveBorder": "#80CBC4",
-      "tab.unfocusedActiveBorderTop": "#80CBC400",
-      "tab.activeModifiedBorder": "#80CBC400",
-      "statusBar.debuggingBackground": "#80CBC433",
-      "statusBar.debuggingForeground": "#80CBC4",
-      "editor.lineHighlightBackground": "#ffffff0f",
-      "editor.lineHighlightBorder": "#ffffff00"
+      "statusBarItem.remoteHoverForeground": "#000000"
     }
   },
-  "html.format.contentUnformatted": "pre,code,textarea",
   "window.systemColorTheme": "auto",
+  // [Files]
   "outline.collapseItems": "alwaysCollapse",
   "files.eol": "\n",
   "files.simpleDialog.enable": true,
   "files.associations": {
     ".env.*": "dotenv",
-    "*.json": "jsonc",
     "*.cjson": "jsonc",
     "*.wxs": "javascript",
     "*.wxss": "css",
@@ -156,10 +224,7 @@
     "*.dconf": "ini"
   },
   "files.autoSaveWhenNoErrors": true,
-  "debug.console.fontSize": 13,
-  "debug.onTaskErrors": "debugAnyway",
-  "debug.toolBarLocation": "commandCenter",
-  "debug.breakpointsView.presentation": "tree",
+  // [Search]
   "search.quickOpen.history.filterSortOrder": "recency",
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
   "search.followSymlinks": false,
@@ -187,11 +252,18 @@
     "**/CHANGELOG*": true,
     "**/LICENSE*": true
   },
+  // [Debug]
+  "debug.console.fontSize": 13,
+  "debug.onTaskErrors": "debugAnyway",
+  "debug.toolBarLocation": "commandCenter",
+  "debug.breakpointsView.presentation": "tree",
+  // [SCM & Diff]
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.untrackedChanges": "separate",
   "git.timeline.showUncommitted": true,
   "git.blame.ignoreWhitespace": true,
+  "git.addAICoAuthor": "off",
   "scm.workingSets.enabled": true,
   "scm.diffDecorationsGutterWidth": 2,
   "scm.repositories.explorer": true,
@@ -199,17 +271,15 @@
   "diffEditor.diffAlgorithm": "advanced",
   "diffEditor.maxComputationTime": 0,
   "diffEditor.experimental.showMoves": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.hideUnchangedRegions.contextLineCount": 16,
   "diffEditor.ignoreTrimWhitespace": false,
-  "extensions.ignoreRecommendations": true,
-  "extensions.autoUpdate": false,
-  "css.lint.hexColorLength": "ignore",
-  "css.format.spaceAroundSelectorSeparator": true,
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  // [Terminal]
   "terminal.integrated.stickyScroll.enabled": true,
+  "terminal.integrated.tabs.allowAgentCliTitle": true,
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.fontWeight": "300",
-  "terminal.integrated.fontFamily": "Liga SFMono Nerd Font",
+  "terminal.integrated.fontFamily": "SFMono Nerd Font",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.smoothScrolling": true,
@@ -224,44 +294,78 @@
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.enableImages": true,
   "terminal.integrated.enableKittyKeyboardProtocol": true,
-  // [Copilot]
-  "inlineChat.enableV2": true,
-  "chat.useAgentSkills": true,
-  "chat.tools.terminal.sandbox.enabled": true,
-  "chat.customAgentInSubagent.enabled": true,
-  "chat.agentsControl.clickBehavior": "cycle",
-  "github.copilot.chat.copilotMemory.enabled": true,
-  "github.copilot.chat.searchSubagent.enabled": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-    "less": false
-  },
   // [Format]
+  "css.lint.hexColorLength": "ignore",
+  "css.format.spaceAroundSelectorSeparator": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
   "[json][jsonc][less][javascript][typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "[markdown][plaintext][juliamarkdown]": {
     "editor.wordWrap": "on",
     "editor.wrappingStrategy": "advanced"
   },
+  "html.format.contentUnformatted": "pre,code,textarea",
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.proseWrap": "never",
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "none",
+  "eslint.quiet": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  // [Languages]
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "markdown.preview.markEditorSelection": false,
+  "js/ts.suggest.paths": false,
+  // [Telemetry]
+  "redhat.telemetry.enabled": false,
+  // [Extensions]
+  "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": "on",
+  "extensions.autoUpdateDelay": 1440,
+  "extensions.supportAgentsWindow": {
+    "vira.vsc-vira-theme": true
+  },
+  "settingsSync.ignoredExtensions": ["byted-sec.bytesec-vscode"],
   // [File Nesting]
   "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 2025/12/14 15:59:56",
+    "//": "Last update at 8/13/2026, 12:17:31 AM",
+    ".agent": ".agent, .claude, .cline, .codebuddy, .codex, .commandcode, .continue, .crush, .cursor, .factory, .gemini, .goose, .junie, .kilocode, .kiro, .kode, .mcpjam, .mux, .neovate, .opencode, .openhands, .pi, .pochi, .qoder, .qwen, .roo, .trae, .windsurf, .zencoder",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .lfsconfig, .mailmap, .git-blame*",
     ".project": ".classpath",
-    "+layout.svelte": "+layout.ts,+layout.ts,+layout.js,+layout.server.ts,+layout.server.js,+layout.gql",
+    "+layout.svelte": "+layout.ts,+layout.js,+layout.server.ts,+layout.server.js,+layout.gql",
     "+page.svelte": "+page.server.ts,+page.server.js,+page.ts,+page.js,+page.gql",
     "AGENTS.md": ".clinerules, .cursorrules, .replit.md, .windsurfrules, AGENT.md, CLAUDE.local.md, CLAUDE.md, GEMINI.md",
     "ansible.cfg": "ansible.cfg, .ansible-lint, requirements.yml",
@@ -271,12 +375,14 @@
     "astro.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, capacitor.config.*, content.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, ionic.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, panda.config.*, playwright.config.*, postcss.config.*, puppeteer.config.*, react-router.config.*, rspack.config.*, sst.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
     "build-wrapper.log": "build-wrapper*.log, build-wrapper-dump*.json, build-wrapper-win*.exe, build-wrapper-linux*, build-wrapper-macosx*",
     "BUILD.bazel": "*.bzl, *.bazel, *.bazelrc, bazel.rc, .bazelignore, .bazelproject, .bazelversion, MODULE.bazel.lock, WORKSPACE",
+    "build.gradle": "settings.gradle, gradlew, gradlew.bat, gradle.properties, gradle.lockfile",
+    "build.gradle.kts": "settings.gradle.kts, gradlew, gradlew.bat, gradle.properties, gradle.lockfile",
     "Cargo.toml": ".clippy.toml, .rustfmt.toml, Cargo.Bazel.lock, Cargo.lock, clippy.toml, cross.toml, insta.yaml, rust-toolchain.toml, rustfmt.toml",
     "CMakeLists.txt": "*.cmake, *.cmake.in, .cmake-format.yaml, CMakePresets.json, CMakeCache.txt",
     "composer.json": ".php*.cache, composer.lock, phpunit.xml*, psalm*.xml",
     "default.nix": "shell.nix",
     "deno.json*": "*.env, .env.*, .envrc, api-extractor.json, deno.lock, env.d.ts, import-map.json, import_map.json, jsconfig.*, tsconfig.*, tsdoc.*",
-    "Dockerfile": "*.dockerfile, .devcontainer.*, .dockerignore, captain-definition, compose.*, docker-compose.*, dockerfile*",
+    "Dockerfile": "*.dockerfile, .devcontainer.*, .dockerignore, Dockerfile*, captain-definition, compose.*, docker-compose.*, dockerfile*",
     "flake.nix": "default.nix, shell.nix, flake.lock",
     "gatsby-config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, capacitor.config.*, content.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, gatsby-browser.*, gatsby-node.*, gatsby-ssr.*, gatsby-transformer.*, histoire.config.*, htmlnanorc.*, i18n.config.*, ionic.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, panda.config.*, playwright.config.*, postcss.config.*, puppeteer.config.*, react-router.config.*, rspack.config.*, sst.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
     "gemfile": ".ruby-version, gemfile.lock",
@@ -284,22 +390,23 @@
     "go.work": "go.work.sum",
     "hatch.toml": ".editorconfig, .flake8, .isort.cfg, .python-version, hatch.toml, requirements*.in, requirements*.pip, requirements*.txt, tox.ini",
     "I*.cs": "$(capture).cs",
+    "justfile": "*.just, .justfile",
     "Makefile": "*.mk",
     "mix.exs": ".credo.exs, .dialyzer_ignore.exs, .formatter.exs, .iex.exs, .tool-versions, mix.lock",
     "next.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, capacitor.config.*, content.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, ionic.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, next-env.d.ts, next-i18next.config.*, panda.config.*, playwright.config.*, postcss.config.*, puppeteer.config.*, react-router.config.*, rspack.config.*, sst.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
-    "nuxt.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .nuxtignore, .nuxtrc, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, capacitor.config.*, content.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, ionic.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, panda.config.*, playwright.config.*, postcss.config.*, puppeteer.config.*, react-router.config.*, rspack.config.*, sst.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
-    "package.json": "*.code-workspace, .browserslist*, .circleci*, .commitlint*, .cspell*, .cursor*, .cz-config.js, .czrc, .dlint.json, .dprint.json*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitmojirc.json, .gitpod*, .huskyrc*, .jslint*, .knip.*, .lintstagedrc*, .ls-lint.yml, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .oxlintrc.json, .oxlintrc.json.bak, .pm2*, .pnp.*, .pnpm*, .prettier*, .pylintrc, .release-please*.json, .releaserc*, .ruff.toml, .sentry*, .shellcheckrc, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .watchman*, .windsurfrules, .xo-config*, .yamllint*, .yarnrc*, Procfile, alejandra.toml, apollo.config.*, appveyor*, azure-pipelines*, biome.json*, bower.json, build.config.*, bun.lock, bun.lockb, bunfig.toml, colada.options.ts, commitlint*, crowdin*, cspell*, cz.config.*, dangerfile*, dlint.json, dprint.json*, ec.config.*, electron-builder.*, eslint*, firebase.json, grunt*, gulp*, jenkins*, knip.*, lefthook.*, lerna*, lint-staged*, nest-cli.*, netlify*, nixpacks*, nodemon*, npm-shrinkwrap.json, nx.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-please*.json, release-tasks.sh, release.config.*, renovate*, rolldown.config.*, rollup.config.*, rspack*, ruff.toml, sentry.*.config.ts, simple-git-hooks*, sonar-project.properties, stylelint*, taze.config.*, tsdown.config.*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, xo.config.*, yarn*",
+    "nuxt.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .nuxtignore, .nuxtrc, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, capacitor.config.*, content.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, ionic.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, nuxt.schema.*, panda.config.*, playwright.config.*, postcss.config.*, puppeteer.config.*, react-router.config.*, rspack.config.*, sst.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
+    "package.json": "*.code-workspace, .autocorrectignore, .autocorrectrc, .browserslist*, .circleci*, .commitlint*, .cspell*, .cursor*, .cz-config.js, .czrc, .dlint.json, .dprint.json*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitmojirc.json, .gitpod*, .huskyrc*, .jslint*, .knip.*, .lintstagedrc*, .ls-lint.yml, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .oxfmtrc.json, .oxfmtrc.json.bak, .oxfmtrc.jsonc, .oxlintrc.json, .oxlintrc.json.bak, .oxlintrc.jsonc, .pm2*, .pnp.*, .pnpm*, .prettier*, .pylintrc, .release-please*.json, .releaserc*, .ruff.toml, .sentry*, .shellcheckrc, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .swcrc, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .vsls.json, .watchman*, .windsurfrules, .xo-config*, .yamllint*, .yarnrc*, Procfile, alejandra.toml, apollo.config.*, appveyor*, azure-pipelines*, biome.json*, bower.json, build.config.*, bun.lock, bun.lockb, bunfig.toml, colada.options.ts, commitlint*, crowdin*, cspell*, cz.config.*, dangerfile*, dlint.json, dprint.json*, ec.config.*, electron-builder.*, eslint*, firebase.json, grunt*, gulp*, jenkins*, knip.*, lefthook.*, lerna*, lint-staged*, nest-cli.*, netlify*, nixpacks*, nodemon*, npm-shrinkwrap.json, nx.*, oxfmt.config.*, oxlint.config.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-please*.json, release-tasks.sh, release.config.*, renovate*, rolldown.config.*, rollup.config.*, rspack*, ruff.toml, sentry.*.config.ts, simple-git-hooks*, sonar-project.properties, stylelint*, taze.config.*, tsdown.config.*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, wrangler.*, xo.config.*, yarn*",
     "Pipfile": ".editorconfig, .flake8, .isort.cfg, .python-version, Pipfile, Pipfile.lock, requirements*.in, requirements*.pip, requirements*.txt, tox.ini",
     "pom.xml": "mvnw*",
     "pubspec.yaml": ".metadata, .packages, all_lint_rules.yaml, analysis_options.yaml, build.yaml, pubspec.lock, pubspec_overrides.yaml",
-    "pyproject.toml": ".commitlint*, .cspell*, .dlint.json, .dprint.json*, .editorconfig, .eslint*, .flake8, .flowconfig, .isort.cfg, .jslint*, .lintstagedrc*, .ls-lint.yml, .markdownlint*, .oxlintrc.json, .oxlintrc.json.bak, .pdm-python, .pdm.toml, .prettier*, .pylintrc, .python-version, .ruff.toml, .shellcheckrc, .stylelint*, .textlint*, .xo-config*, .yamllint*, MANIFEST.in, Pipfile, Pipfile.lock, alejandra.toml, biome.json*, commitlint*, cspell*, dangerfile*, dlint.json, dprint.json*, eslint*, hatch.toml, lint-staged*, pdm.lock, phpcs.xml, poetry.lock, poetry.toml, prettier*, pyproject.toml, pyrightconfig.json, requirements*.in, requirements*.pip, requirements*.txt, ruff.toml, setup.cfg, setup.py, stylelint*, tox.ini, tslint*, uv.lock, uv.toml, xo.config.*",
-    "quasar.conf.js": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, capacitor.config.*, content.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, ionic.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, panda.config.*, playwright.config.*, postcss.config.*, puppeteer.config.*, quasar.extensions.json, react-router.config.*, rspack.config.*, sst.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
+    "pyproject.toml": ".autocorrectignore, .autocorrectrc, .commitlint*, .cspell*, .dlint.json, .dprint.json*, .editorconfig, .eslint*, .flake8, .flowconfig, .isort.cfg, .jslint*, .lintstagedrc*, .ls-lint.yml, .markdownlint*, .oxfmtrc.json, .oxfmtrc.json.bak, .oxfmtrc.jsonc, .oxlintrc.json, .oxlintrc.json.bak, .oxlintrc.jsonc, .pdm-python, .pdm.toml, .prettier*, .pylintrc, .python-version, .ruff.toml, .shellcheckrc, .stylelint*, .textlint*, .xo-config*, .yamllint*, MANIFEST.in, Pipfile, Pipfile.lock, alejandra.toml, biome.json*, commitlint*, cspell*, dangerfile*, dlint.json, dprint.json*, eslint*, hatch.toml, lint-staged*, oxfmt.config.*, oxlint.config.*, pdm.lock, phpcs.xml, poetry.lock, poetry.toml, prettier*, pyproject.toml, pyrightconfig.json, requirements*.in, requirements*.pip, requirements*.txt, ruff.toml, setup.cfg, setup.py, stylelint*, tox.ini, tslint*, uv.lock, uv.toml, xo.config.*",
+    "quasar.conf*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, capacitor.config.*, content.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, ionic.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, panda.config.*, playwright.config.*, postcss.config.*, puppeteer.config.*, quasar.extensions.json, react-router.config.*, rspack.config.*, sst.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
     "readme*": "AUTHORS, Authors, BACKERS*, Backers*, CHANGELOG*, CITATION*, CODEOWNERS, CODE_OF_CONDUCT*, CONTRIBUTING*, CONTRIBUTORS, CONTRIBUTORS.MD, CONTRIBUTORS.TXT, COPYING*, CREDITS, Changelog*, Citation*, Code_Of_Conduct*, Codeowners, Contributing*, Contributors, Contributors.md, Contributors.txt, Copying*, Credits, GOVERNANCE.MD, Governance.md, HISTORY.MD, History.md, LICENSE, LICENSE.MD, LICENSE.txt, License, License.md, License.txt, MAINTAINERS, Maintainers, README-*, README_*, RELEASE_NOTES*, ROADMAP.MD, Readme-*, Readme_*, Release_Notes*, Roadmap.md, SECURITY.MD, SPONSORS*, Security.md, Sponsors*, authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, contributors.md, contributors.txt, copying*, credits, governance.md, history.md, license, license.md, license.txt, maintainers, readme-*, readme_*, release_notes*, roadmap.md, security.md, sponsors*",
     "Readme*": "AUTHORS, Authors, BACKERS*, Backers*, CHANGELOG*, CITATION*, CODEOWNERS, CODE_OF_CONDUCT*, CONTRIBUTING*, CONTRIBUTORS, CONTRIBUTORS.MD, CONTRIBUTORS.TXT, COPYING*, CREDITS, Changelog*, Citation*, Code_Of_Conduct*, Codeowners, Contributing*, Contributors, Contributors.md, Contributors.txt, Copying*, Credits, GOVERNANCE.MD, Governance.md, HISTORY.MD, History.md, LICENSE, LICENSE.MD, LICENSE.txt, License, License.md, License.txt, MAINTAINERS, Maintainers, README-*, README_*, RELEASE_NOTES*, ROADMAP.MD, Readme-*, Readme_*, Release_Notes*, Roadmap.md, SECURITY.MD, SPONSORS*, Security.md, Sponsors*, authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, contributors.md, contributors.txt, copying*, credits, governance.md, history.md, license, license.md, license.txt, maintainers, readme-*, readme_*, release_notes*, roadmap.md, security.md, sponsors*",
     "README*": "AUTHORS, Authors, BACKERS*, Backers*, CHANGELOG*, CITATION*, CODEOWNERS, CODE_OF_CONDUCT*, CONTRIBUTING*, CONTRIBUTORS, CONTRIBUTORS.MD, CONTRIBUTORS.TXT, COPYING*, CREDITS, Changelog*, Citation*, Code_Of_Conduct*, Codeowners, Contributing*, Contributors, Contributors.md, Contributors.txt, Copying*, Credits, GOVERNANCE.MD, Governance.md, HISTORY.MD, History.md, LICENSE, LICENSE.MD, LICENSE.txt, License, License.md, License.txt, MAINTAINERS, Maintainers, README-*, README_*, RELEASE_NOTES*, ROADMAP.MD, Readme-*, Readme_*, Release_Notes*, Roadmap.md, SECURITY.MD, SPONSORS*, Security.md, Sponsors*, authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, contributors.md, contributors.txt, copying*, credits, governance.md, history.md, license, license.md, license.txt, maintainers, readme-*, readme_*, release_notes*, roadmap.md, security.md, sponsors*",
     "remix.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, capacitor.config.*, content.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, i18n.config.*, ionic.config.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, panda.config.*, playwright.config.*, postcss.config.*, puppeteer.config.*, react-router.config.*, remix.*, rspack.config.*, sst.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, vuetify.config.*, webpack.config.*, windi.config.*",
     "requirements.txt": ".editorconfig, .flake8, .isort.cfg, .python-version, requirements*.in, requirements*.pip, requirements*.txt, tox.ini",
-    "rush.json": "*.code-workspace, .browserslist*, .circleci*, .commitlint*, .cspell*, .cursor*, .cz-config.js, .czrc, .dlint.json, .dprint.json*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitmojirc.json, .gitpod*, .huskyrc*, .jslint*, .knip.*, .lintstagedrc*, .ls-lint.yml, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .oxlintrc.json, .oxlintrc.json.bak, .pm2*, .pnp.*, .pnpm*, .prettier*, .pylintrc, .release-please*.json, .releaserc*, .ruff.toml, .sentry*, .shellcheckrc, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .watchman*, .windsurfrules, .xo-config*, .yamllint*, .yarnrc*, Procfile, alejandra.toml, apollo.config.*, appveyor*, azure-pipelines*, biome.json*, bower.json, build.config.*, bun.lock, bun.lockb, bunfig.toml, colada.options.ts, commitlint*, crowdin*, cspell*, cz.config.*, dangerfile*, dlint.json, dprint.json*, ec.config.*, electron-builder.*, eslint*, firebase.json, grunt*, gulp*, jenkins*, knip.*, lefthook.*, lerna*, lint-staged*, nest-cli.*, netlify*, nixpacks*, nodemon*, npm-shrinkwrap.json, nx.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-please*.json, release-tasks.sh, release.config.*, renovate*, rolldown.config.*, rollup.config.*, rspack*, ruff.toml, sentry.*.config.ts, simple-git-hooks*, sonar-project.properties, stylelint*, taze.config.*, tsdown.config.*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, wrangler.*, xo.config.*, yarn*",
+    "rush.json": "*.code-workspace, .autocorrectignore, .autocorrectrc, .browserslist*, .circleci*, .commitlint*, .cspell*, .cursor*, .cz-config.js, .czrc, .dlint.json, .dprint.json*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitmojirc.json, .gitpod*, .huskyrc*, .jslint*, .knip.*, .lintstagedrc*, .ls-lint.yml, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .oxfmtrc.json, .oxfmtrc.json.bak, .oxfmtrc.jsonc, .oxlintrc.json, .oxlintrc.json.bak, .oxlintrc.jsonc, .pm2*, .pnp.*, .pnpm*, .prettier*, .pylintrc, .release-please*.json, .releaserc*, .ruff.toml, .sentry*, .shellcheckrc, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .swcrc, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .vsls.json, .watchman*, .windsurfrules, .xo-config*, .yamllint*, .yarnrc*, Procfile, alejandra.toml, apollo.config.*, appveyor*, azure-pipelines*, biome.json*, bower.json, build.config.*, bun.lock, bun.lockb, bunfig.toml, colada.options.ts, commitlint*, crowdin*, cspell*, cz.config.*, dangerfile*, dlint.json, dprint.json*, ec.config.*, electron-builder.*, eslint*, firebase.json, grunt*, gulp*, jenkins*, knip.*, lefthook.*, lerna*, lint-staged*, nest-cli.*, netlify*, nixpacks*, nodemon*, npm-shrinkwrap.json, nx.*, oxfmt.config.*, oxlint.config.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-please*.json, release-tasks.sh, release.config.*, renovate*, rolldown.config.*, rollup.config.*, rspack*, ruff.toml, sentry.*.config.ts, simple-git-hooks*, sonar-project.properties, stylelint*, taze.config.*, tsdown.config.*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, wrangler.*, xo.config.*, yarn*",
     "sanity.config.*": "sanity.cli.*, sanity.types.ts, schema.json",
     "setup.cfg": ".editorconfig, .flake8, .isort.cfg, .python-version, MANIFEST.in, requirements*.in, requirements*.pip, requirements*.txt, setup.cfg, tox.ini",
     "setup.py": ".editorconfig, .flake8, .isort.cfg, .python-version, MANIFEST.in, requirements*.in, requirements*.pip, requirements*.txt, setup.cfg, setup.py, tox.ini",
@@ -324,13 +431,14 @@
     "*.cpp": "$(capture).hpp, $(capture).h, $(capture).hxx, $(capture).hh",
     "*.cs": "$(capture).*.cs, $(capture).cs.uid",
     "*.cshtml": "$(capture).cshtml.cs, $(capture).cshtml.css",
-    "*.csproj": "*.config, *proj.user, appsettings.*, bundleconfig.json",
+    "*.csproj": "*.config, *proj.user, appsettings.*, bundleconfig.json, packages.lock.json",
     "*.css": "$(capture).css.map, $(capture).*.css",
     "*.cxx": "$(capture).hpp, $(capture).h, $(capture).hxx, $(capture).hh",
     "*.dart": "$(capture).freezed.dart, $(capture).g.dart, $(capture).mapper.dart",
     "*.db": "*.db-shm, *.db-wal",
     "*.ex": "$(capture).html.eex, $(capture).html.heex, $(capture).html.leex",
     "*.fs": "$(capture).fs.js, $(capture).fs.js.map, $(capture).fs.jsx, $(capture).fs.ts, $(capture).fs.tsx, $(capture).fs.rs, $(capture).fs.php, $(capture).fs.dart",
+    "*.fsproj": "*.config, *proj.user, appsettings.*, bundleconfig.json, packages.lock.json",
     "*.gd": "$(capture).gd.uid",
     "*.gdshader": "$(capture).gdshader.uid",
     "*.gdshaderinc": "$(capture).gdshaderinc.uid",
@@ -350,50 +458,52 @@
     "*.resx": "$(capture).*.resx, $(capture).designer.cs, $(capture).designer.vb",
     "*.tex": "$(capture).acn, $(capture).acr, $(capture).alg, $(capture).aux, $(capture).bbl, $(capture).bbl-SAVE-ERROR, $(capture).bcf, $(capture).bib, $(capture).blg, $(capture).fdb_latexmk, $(capture).fls, $(capture).glg, $(capture).glo, $(capture).gls, $(capture).idx, $(capture).ind, $(capture).ist, $(capture).lof, $(capture).log, $(capture).lot, $(capture).nav, $(capture).out, $(capture).run.xml, $(capture).snm, $(capture).synctex.gz, $(capture).toc, $(capture).xdv",
     "*.ts": "$(capture).js, $(capture).d.ts.map, $(capture).*.ts, $(capture)_*.js, $(capture)_*.ts",
-    "*.tsx": "$(capture).ts, $(capture).*.tsx, $(capture)_*.ts, $(capture)_*.tsx, $(capture).css, $(capture).module.css, $(capture).less, $(capture).module.less, $(capture).module.less.d.ts, $(capture).scss, $(capture).module.scss, $(capture).module.scss.d.ts, $(capture).css.ts",
-    "*.vbproj": "*.config, *proj.user, appsettings.*, bundleconfig.json",
+    "*.tsx": "$(capture).ts, $(capture).*.ts, $(capture).*.tsx, $(capture)_*.ts, $(capture)_*.tsx, $(capture).css, $(capture).module.css, $(capture).less, $(capture).module.less, $(capture).module.less.d.ts, $(capture).scss, $(capture).module.scss, $(capture).module.scss.d.ts, $(capture).css.ts",
+    "*.vbproj": "*.config, *proj.user, appsettings.*, bundleconfig.json, packages.lock.json",
     "*.vue": "$(capture).*.ts, $(capture).*.js, $(capture).story.vue",
     "*.w": "$(capture).*.w, I$(capture).w",
     "*.wat": "$(capture).wasm",
     "*.xaml": "$(capture).xaml.cs"
   },
+
+  // [Copilot]
+  "chat.stickyScroll.enabled": true,
+  "interactiveWindow.promptToSaveOnClose": true,
+  "sessions.changes.openSingleFileDiff": true,
+  "sessions.layout.autoCollapseSessionsSidebar": true,
+  "sessions.layout.singlePaneDetailPanel": true,
+  "chat.agentHost.allowSignedOutWhenUsable": true,
+  "chat.assistedPermissions.enabled": true,
+  "chat.tools.compressOutput.enabled": true,
+  "chat.useCustomizationsInParentRepositories": true,
+  "chat.useNestedAgentsMdFiles": true,
+  "chat.experimental.incrementalRendering.enabled": true,
+  "chat.experimental.incrementalRendering.buffering": "paragraph",
+  "github.copilot.chat.skillTool.enabled": true,
+  "chat.agent.sandbox.enabled": "on",
+  "chat.agent.sandbox.allowNetwork": true,
+  "chat.tips.enabled": false,
+  "github.copilot.chat.exploreAgent.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.extendedRange": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "less": false
+  },
+
+  // [AI]
+  "jsts-chat-features.skills.enabled": true,
+
   // --- Extension configs ---
   "emmet.showSuggestionsAsSnippets": true,
-  // [Path Intellisense]
-  "typescript.suggest.paths": false,
-  "javascript.suggest.paths": false,
-  // [Prettier]
-  "prettier.semi": false,
-  "prettier.tabWidth": 2,
-  "prettier.singleQuote": true,
-  "prettier.proseWrap": "never",
-  "prettier.printWidth": 100,
-  "prettier.trailingComma": "none",
-  // [ESLint]
-  "eslint.quiet": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "toml"
-  ],
-  "eslint.workingDirectories": [{ "mode": "auto" }],
-  // [SVG Preview]
   "svgPreview.autoOpen": false,
-  // [Error Lens]
   "errorLens.enabledDiagnosticLevels": ["error", "warning"],
   "errorLens.excludeBySource": ["cSpell", "Grammarly", "eslint"],
-  // [cSpell Checker]
   "cSpell.language": "en,en-US",
   "cSpell.allowCompoundWords": true,
-  // [GitLens]
   "gitlens.menus": false,
   "gitlens.views.searchAndCompare.files.layout": "tree",
   "gitlens.views.worktrees.files.layout": "list",
@@ -410,7 +520,6 @@
       "type": "GitLab"
     }
   ],
-  // [Better Comments]
   "better-comments.tags": [
     // 已知 bug，需要修复
     // FIXME: discount > 1 时会计算错误
@@ -446,8 +555,5 @@
     // 必要时用 DISABLED 标记说明原因、责任人、恢复条件。
     // DISABLED(bob, 2025-09-05): 暂时关闭老逻辑，等待安全团队评审 TASK-1234
     { "tag": "DISABLED", "color": "#A77DC2", "strikethrough": true, "bold": true }
-  ],
-  "settingsSync.ignoredExtensions": [
-    "byted-sec.bytesec-vscode"
   ]
 }

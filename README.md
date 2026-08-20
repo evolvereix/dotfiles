@@ -89,6 +89,11 @@ DOTFILES_BACKUP_DIR=~/Desktop/dotfiles-backup ./install.sh --configs-only
 | `config/starship.toml` | `~/.config/starship.toml` |
 | `config/mise/config.toml` | `~/.config/mise/config.toml` |
 | `config/bat/config` | `~/.config/bat/config` |
+| `config/btop/btop.conf` | `~/.config/btop/btop.conf` |
+| `config/gh/config.yml` | `~/.config/gh/config.yml` |
+| `config/herdr/config.toml` | `~/.config/herdr/config.toml` |
+| `config/1Password/ssh/agent.toml` | `~/.config/1Password/ssh/agent.toml` |
+| `config/nvim` | `~/.config/nvim` |
 | `config/ghostty/config.ghostty` | `~/.config/ghostty/config` |
 | `config/ghostty/themes` | `~/.config/ghostty/themes` |
 | `config/ghostty/icons` | `~/.config/ghostty/icons` |
@@ -106,8 +111,10 @@ DOTFILES_BACKUP_DIR=~/Desktop/dotfiles-backup ./install.sh --configs-only
 
 开发工具：
 
-- mise：Node.js 22、最新版 pnpm、最新版 Go。
+- mise：Node.js 22、最新版 pnpm、最新版 Go 和 Java。
 - Git 默认配置、别名、全局 ignore，以及基于 1Password SSH key 的 commit signing。
+- Neovim：LazyVim、Material 主题和 Diffview 快捷键。
+- GitHub CLI、Herdr 与 1Password SSH Agent 的非敏感配置。
 - VS Code 设置和推荐扩展。
 
 Homebrew 应用和工具：

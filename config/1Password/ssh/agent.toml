@@ -1,0 +1,3 @@
+# This config enables SSH keys from the default 1Password vault.
+[[ssh-keys]]
+vault = "Private"
