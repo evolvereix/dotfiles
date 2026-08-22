@@ -1,0 +1,88 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "high"
+sandbox_mode = "danger-full-access"
+service_tier = "default"
+
+[features]
+hooks = true
+memories = true
+js_repl = false
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+[desktop]
+conversationDetailMode = "STEPS_COMMANDS"
+ambient-suggestions-enabled = true
+appearanceDiffMarkerStyle = "symbols"
+mac-menu-bar-enabled = false
+preventSleepWhileRunning = true
+appearanceDarkCodeThemeId = "material"
+keepRemoteControlAwakeWhilePluggedIn = true
+dock-icon-preference = "codex-system"
+usePointerCursors = true
+followUpQueueMode = "steer"
+show-context-window-usage = true
+avatar-overlay-mascot-width-px = 80
+hotkey-window-projectless-default-enabled = true
+appearanceTheme = "system"
+reduced-motion-preference = "system"
+codeFontSize = 13
+enabled-reasoning-efforts = [ "low", "medium", "high", "xhigh", "ultra", "max" ]
+defaultTerminalLocation = "bottom"
+open-local-url-in-target-preference = "external-browser"
+browser-download-prompt-enabled = false
+git-always-force-push = false
+reviewDelivery = "inline"
+appearanceLightCodeThemeId = "codex"
+sansFontSize = 14
+
+  [desktop.appearanceDarkChromeTheme]
+  accent = "#c6ff00"
+  contrast = 80
+  ink = "#ccdbe3"
+  opaqueWindows = false
+  surface = "#151719"
+
+    [desktop.appearanceDarkChromeTheme.fonts]
+    code = '"SF Mono"'
+
+    [desktop.appearanceDarkChromeTheme.semanticColors]
+    diffAdded = "#c3e88d"
+    diffRemoved = "#f07178"
+    skill = "#c792ea"
+
+  [desktop.appearanceLightChromeTheme]
+  accent = "#0169cc"
+  contrast = 40
+  ink = "#0d0d0d"
+  opaqueWindows = false
+  surface = "#ffffff"
+
+    [desktop.appearanceLightChromeTheme.fonts]
+    code = '"SF Mono"'
+    ui = "Inter"
+
+    [desktop.appearanceLightChromeTheme.semanticColors]
+    diffAdded = "#00a240"
+    diffRemoved = "#e02e2a"
+    skill = "#751ed9"
+
+  [desktop.open-in-target-preferences]
+  global = "vscode"
+
+[tui]
+notifications = true
+status_line = [
+  "model-with-reasoning",
+  "context-remaining",
+  "git-branch",
+  "current-dir"
+]
+terminal_title = [ "spinner", "project", "git-branch" ]
+theme = "Anthracite"
+
+[memories]
+generate_memories = true
+use_memories = true
+disable_on_external_context = true

@@ -299,6 +299,18 @@ sync_file() {
   log_success "Synced: $target"
 }
 
+sync_file_if_missing() {
+  local source="$1"
+  local target="$2"
+
+  if [[ -e "$target" || -L "$target" ]]; then
+    log_success "Preserved existing: $target"
+    return
+  fi
+
+  sync_file "$source" "$target"
+}
+
 sync_dir() {
   local source="$1"
   local target="$2"
@@ -337,6 +349,12 @@ sync_configs() {
   sync_dir "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
   sync_file "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   sync_file "$DOTFILES_DIR/vscode/extensions.json" "$HOME/Library/Application Support/Code/User/extensions.json"
+
+  # Flux Island and Codex App add machine-local hooks and runtime paths to these files.
+  sync_file_if_missing "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
+  sync_file "$DOTFILES_DIR/claude/themes/anthracite.json" "$HOME/.claude/themes/anthracite.json"
+  sync_file_if_missing "$DOTFILES_DIR/codex/config.toml" "$HOME/.codex/config.toml"
+  sync_file "$DOTFILES_DIR/codex/themes/Anthracite.tmTheme" "$HOME/.codex/themes/Anthracite.tmTheme"
 
   sync_file "$DOTFILES_DIR/config/ghostty/config.ghostty" "$HOME/.config/ghostty/config"
   sync_dir "$DOTFILES_DIR/config/ghostty/themes" "$HOME/.config/ghostty/themes"
