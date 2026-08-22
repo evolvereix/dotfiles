@@ -270,7 +270,7 @@ backup_target() {
   local target="$1"
   local backup
 
-  [[ -e "$target" || -L "$target" ]] || return
+  [[ -e "$target" || -L "$target" ]] || return 0
 
   backup="$(backup_path_for "$target")"
   mkdir -p "$(dirname "$backup")"
