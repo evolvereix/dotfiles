@@ -7,19 +7,21 @@ service_tier = "default"
 hooks = true
 memories = true
 js_repl = false
+network_proxy = true
+prevent_idle_sleep = true
 
 [mcp_servers.openaiDeveloperDocs]
 url = "https://developers.openai.com/mcp"
 
 [desktop]
-conversationDetailMode = "STEPS_COMMANDS"
+conversationDetailMode = "STEPS_PROSE"
 ambient-suggestions-enabled = true
 appearanceDiffMarkerStyle = "symbols"
 mac-menu-bar-enabled = false
 preventSleepWhileRunning = true
 appearanceDarkCodeThemeId = "material"
 keepRemoteControlAwakeWhilePluggedIn = true
-dock-icon-preference = "codex-system"
+dock-icon-preference = "app-default"
 usePointerCursors = true
 followUpQueueMode = "steer"
 show-context-window-usage = true
@@ -32,6 +34,7 @@ enabled-reasoning-efforts = [ "low", "medium", "high", "xhigh", "ultra", "max" ]
 defaultTerminalLocation = "bottom"
 open-local-url-in-target-preference = "external-browser"
 browser-download-prompt-enabled = false
+open-link-in-target-preference = "external-browser"
 git-always-force-push = false
 reviewDelivery = "inline"
 appearanceLightCodeThemeId = "codex"
@@ -41,7 +44,7 @@ sansFontSize = 14
   accent = "#c6ff00"
   contrast = 80
   ink = "#ccdbe3"
-  opaqueWindows = false
+  opaqueWindows = true
   surface = "#151719"
 
     [desktop.appearanceDarkChromeTheme.fonts]
@@ -75,12 +78,17 @@ sansFontSize = 14
 notifications = true
 status_line = [
   "model-with-reasoning",
-  "context-remaining",
+  "project-name",
   "git-branch",
-  "current-dir"
+  "context-used",
+  "used-tokens",
+  "five-hour-limit",
+  "thread-id"
 ]
+status_line_use_colors = false
 terminal_title = [ "spinner", "project", "git-branch" ]
 theme = "Anthracite"
+session_picker_view = "dense"
 
 [memories]
 generate_memories = true

@@ -353,8 +353,12 @@ sync_configs() {
   # Flux Island and Codex App add machine-local hooks and runtime paths to these files.
   sync_file_if_missing "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
   sync_file "$DOTFILES_DIR/claude/themes/anthracite.json" "$HOME/.claude/themes/anthracite.json"
+  sync_file "$DOTFILES_DIR/claude/themes/anthracite.jsonc" "$HOME/.claude/themes/anthracite.jsonc"
   sync_file_if_missing "$DOTFILES_DIR/codex/config.toml" "$HOME/.codex/config.toml"
   sync_file "$DOTFILES_DIR/codex/themes/Anthracite.tmTheme" "$HOME/.codex/themes/Anthracite.tmTheme"
+
+  sync_file "$DOTFILES_DIR/config/opencode/tui.json" "$HOME/.config/opencode/tui.json"
+  sync_file "$DOTFILES_DIR/config/opencode/themes/anthracite.json" "$HOME/.config/opencode/themes/anthracite.json"
 
   sync_file "$DOTFILES_DIR/config/ghostty/config.ghostty" "$HOME/.config/ghostty/config"
   sync_dir "$DOTFILES_DIR/config/ghostty/themes" "$HOME/.config/ghostty/themes"

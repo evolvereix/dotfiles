@@ -9,7 +9,7 @@ adjust-cell-height = 12%
 # 主题与对比度
 theme = Anthracite
 minimum-contrast = 1.1
-window-colorspace = display-p3
+window-colorspace = srgb
 background-opacity = 1.0
 
 # 窗口与外观

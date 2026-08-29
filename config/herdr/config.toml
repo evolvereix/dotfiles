@@ -1,3 +1,82 @@
+onboarding = false
+
 [theme]
 name = "terminal"
 auto_switch = false
+
+[theme.custom]
+# 导航、高亮、活动边框
+accent = "#80CBC4"
+# 主画布与侧栏背景
+panel_bg = "#151719"
+sidebar_bg = "#151719"
+# 行状态背景
+# #282B2E = VSCode list.inactiveSelectionBackground (#CCDBE31a) 在 #151719 上的混合值
+active_row_bg = "#282B2E"
+selection_bg = "#2E2F30"
+# 表面层级
+surface0 = "#202228"
+surface1 = "#24262E"
+surface_dim = "#32353E"
+# 次级文字与界面元素
+overlay0 = "#61686B"
+overlay1 = "#B2CCD6"
+# 正文层级
+text = "#CCDBE3"
+subtext0 = "#B2CCD6"
+# Vira 语义色
+mauve = "#C792EA"
+green = "#C3E88D"
+yellow = "#FFCB6B"
+red = "#F07178"
+blue = "#82AAFF"
+teal = "#89DDFF"
+peach = "#F78C6C"
+
+[ui]
+status_indicators = "symbols"
+show_agent_labels_on_pane_borders = true
+pane_scrollbars = false
+hide_tab_bar_when_single_tab = true
+
+agent_panel_sort = "spaces"
+
+# 侧栏行样式。herdr 没有全局 dim 开关：dim 只是 RawStyledSidebarToken 的
+# 一个布尔字段（token/fg/bold/dim），只能逐 token 关。这里对两个 sidebar
+# 分区的全部内置 token 显式 dim = false，保持默认 rows 布局不变。
+# state_icon 不设 fg —— 它靠前景色表达 agent 状态（working/blocked/idle）。
+# 两个分区用同一套两级层次：主标识 #CCDBE3(text)，从属信息 #61686B(overlay0)。
+# agents 的 workspace/agent 对应 spaces 的 workspace/branch。
+# state_icon 和 git_status 不设 fg —— 它们靠前景色表达语义。
+[ui.sidebar.agents]
+rows = [
+  [
+    { token = "state_icon", dim = false },
+    { token = "workspace", fg = "#CCDBE3", dim = false },
+    { token = "tab", fg = "#61686B", dim = false },
+  ],
+  [{ token = "agent", fg = "#61686B", dim = false }],
+]
+
+[ui.sidebar.spaces]
+rows = [
+  [
+    { token = "state_icon", dim = false },
+    { token = "workspace", fg = "#CCDBE3", dim = false },
+  ],
+  [
+    { token = "branch", fg = "#61686B", dim = false },
+    { token = "git_status", dim = false },
+  ],
+]
+
+[ui.sound]
+enabled = false
+
+[keys]
+# Workspace
+previous_workspace = "ctrl+alt+["
+next_workspace = "ctrl+alt+]"
+# Agent
+previous_agent = "ctrl+alt+k"
+next_agent = "ctrl+alt+j"

@@ -99,8 +99,11 @@ DOTFILES_BACKUP_DIR=~/Desktop/dotfiles-backup ./install.sh --configs-only
 | `config/ghostty/icons` | `~/.config/ghostty/icons` |
 | `claude/settings.json` | `~/.claude/settings.json`（仅目标不存在时） |
 | `claude/themes/anthracite.json` | `~/.claude/themes/anthracite.json` |
+| `claude/themes/anthracite.jsonc` | `~/.claude/themes/anthracite.jsonc`（带注释的主题维护文件） |
 | `codex/config.toml` | `~/.codex/config.toml`（仅目标不存在时） |
 | `codex/themes/Anthracite.tmTheme` | `~/.codex/themes/Anthracite.tmTheme` |
+| `config/opencode/tui.json` | `~/.config/opencode/tui.json` |
+| `config/opencode/themes/anthracite.json` | `~/.config/opencode/themes/anthracite.json` |
 | `vscode/settings.json` | `~/Library/Application Support/Code/User/settings.json` |
 | `vscode/extensions.json` | `~/Library/Application Support/Code/User/extensions.json` |
 
@@ -119,7 +122,7 @@ DOTFILES_BACKUP_DIR=~/Desktop/dotfiles-backup ./install.sh --configs-only
 - Git 默认配置、别名、全局 ignore，以及基于 1Password SSH key 的 commit signing。
 - Neovim：LazyVim、Material 主题和 Diffview 快捷键。
 - GitHub CLI、Herdr 与 1Password SSH Agent 的非敏感配置。
-- Claude Code 与 Codex 的基础配置和 Anthracite 主题。
+- Claude Code、Codex 与 OpenCode 的基础 UI 配置和 Anthracite 主题。
 - VS Code 设置和推荐扩展。
 
 Homebrew 应用和工具：
@@ -137,7 +140,7 @@ Homebrew 应用和工具：
 - VS Code 扩展只有在 `code` 命令可用时才会自动安装；否则脚本只会复制推荐扩展列表。
 - Ghostty 源文件在仓库中叫 `config.ghostty`，安装时会写入 Ghostty 标准路径：`~/.config/ghostty/config`。
 - Claude 和 Codex 的主配置只在目标文件不存在时安装，避免覆盖 Computer Use、插件信任状态和其他机器生成内容。
-- 不要把 Claude 或 Codex 的登录态、会话、缓存、hooks 或本机生成状态加入仓库。
+- 不要把 AI 工具的登录态、会话、缓存、hooks、provider API key、项目信任记录或本机生成状态加入仓库。
 
 ## 更新
 
