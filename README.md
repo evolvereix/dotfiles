@@ -127,11 +127,11 @@ DOTFILES_BACKUP_DIR=~/Desktop/dotfiles-backup ./install.sh --configs-only
 
 Homebrew 应用和工具：
 
-- `mise`、`starship`、`bat`
-- 1Password、Surge、Ghostty、Claude、Claude Code、ChatGPT、Codex、Codex App
-- Notion、CleanShot、RapidAPI、Fork、SF Symbols、Dia
-- Visual Studio Code、IntelliJ IDEA、Android Platform Tools
-- 飞书、Figma、Google Chrome、MWeb Pro、Eagle、WeChat
+- 常用命令行工具、开发工具和图形库。
+- AI、终端、编辑器、网络、数据库及系统增强类应用。
+- 浏览器、办公协作、设计、通信、音乐和效率类应用。
+
+完整软件清单维护在 [Brewfile](config/homebrew/Brewfile) 中。
 
 ## 注意事项
 
@@ -160,7 +160,16 @@ git pull
 本机 Homebrew 软件变化后，可以用下面命令刷新仓库中的 Brewfile：
 
 ```bash
-brew bundle dump --file=config/homebrew/Brewfile --force
+brew bundle dump --file=config/homebrew/Brewfile --force --no-describe --no-vscode
 ```
 
-提交前先检查 diff，避免把临时安装的软件写进去。
+`--no-describe` 保持 Brewfile 无描述注释；`--no-vscode` 排除本机 VS Code 扩展。推荐扩展由 [vscode/extensions.json](vscode/extensions.json) 维护，并由 `install.sh` 单独安装。
+
+刷新后检查依赖和差异：
+
+```bash
+brew bundle check --file=config/homebrew/Brewfile --no-upgrade
+git diff -- config/homebrew/Brewfile
+```
+
+导出会包含本机的 tap 和信任配置，提交前应检查是否混入临时软件或仅供本机使用的自定义源。
