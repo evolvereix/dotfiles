@@ -339,6 +339,7 @@ sync_configs() {
   sync_file "$DOTFILES_DIR/config/git/.gitconfig" "$HOME/.gitconfig"
   sync_file "$DOTFILES_DIR/config/git/.gitignore" "$HOME/.config/git/.gitignore"
   sync_file "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+  sync_file "$DOTFILES_DIR/zsh/.zprofile" "$HOME/.zprofile"
   sync_file "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
   sync_file "$DOTFILES_DIR/config/mise/config.toml" "$HOME/.config/mise/config.toml"
   sync_file "$DOTFILES_DIR/config/bat/config" "$HOME/.config/bat/config"

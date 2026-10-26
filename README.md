@@ -86,6 +86,7 @@ DOTFILES_BACKUP_DIR=~/Desktop/dotfiles-backup ./install.sh --configs-only
 | `config/git/.gitconfig` | `~/.gitconfig` |
 | `config/git/.gitignore` | `~/.config/git/.gitignore` |
 | `zsh/.zshrc` | `~/.zshrc` |
+| `zsh/.zprofile` | `~/.zprofile` |
 | `config/starship.toml` | `~/.config/starship.toml` |
 | `config/mise/config.toml` | `~/.config/mise/config.toml` |
 | `config/bat/config` | `~/.config/bat/config` |
@@ -136,7 +137,7 @@ Homebrew 应用和工具：
 ## 注意事项
 
 - 新机器安装前，先检查 [config/git/.gitconfig](config/git/.gitconfig)，把示例 `user.signingkey` 换成自己的 1Password SSH signing key。
-- [zsh/.zshrc](zsh/.zshrc) 默认会在交互式 shell 中开启本地代理，不需要的话可以删掉或调整 `shell_proxy`。
+- [zsh/.zprofile](zsh/.zprofile) 默认会在所有登录 shell（含 `$SHELL -lc`）中开启本地代理，不需要的话可以删掉或调整 `shell_proxy`。
 - VS Code 扩展只有在 `code` 命令可用时才会自动安装；否则脚本只会复制推荐扩展列表。
 - Ghostty 源文件在仓库中叫 `config.ghostty`，安装时会写入 Ghostty 标准路径：`~/.config/ghostty/config`。
 - Claude 和 Codex 的主配置只在目标文件不存在时安装，避免覆盖 Computer Use、插件信任状态和其他机器生成内容。
